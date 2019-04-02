@@ -1,0 +1,11 @@
+<ion-list>
+    <ion-list-header text-center>Características</ion-list-header>
+    
+    <ion-item>
+        <ion-label>Categoría</ion-label>
+        <ion-select interface="alert" [placeholder]="category.toUpperCase()" disabled>
+        </ion-select>
+    </ion-item>
+    <page-add-subcategory [category]="category"></page-add-subcategory>
+    
+</ion-list>

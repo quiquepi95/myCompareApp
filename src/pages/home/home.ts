@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { AddPage } from '../addItem/add-item';
+import { AddPageCategory } from '../addItem/category/add-item-category';
 
 @Component({
   selector: 'page-home',
@@ -17,31 +17,29 @@ export class HomePage {
     const alert =  this.alertCtrl.create({
       title: 'Nuevo item',
       inputs: [{
-        name: 'titulo',
-        type: 'text',
-        placeholder: 'Nombre del objeto'
-      },{
         name: 'radio1',
         type: 'radio',
-        label: 'Radio 1',
-        value: 'value1',
+        label: 'Vehículos',
+        value: 'vehiculos',
         checked: true
       },{
         name: 'radio2',
         type: 'radio',
-        label: 'Radio 2',
-        value: 'value2'
+        label: 'Electrodomésticos',
+        value: 'electrodomesticos'
+      },{
+        name: 'radio3',
+        type: 'radio',
+        label: 'Ordenadores',
+        value: 'ordenadores'
       }],
       buttons: [{
         text: 'Cancelar'
       },{
         text:'Agregar',
         handler: data => {
-          if( data.titulo.length === 0 ){
-            return;
-          }
-          this.navCtrl.push( AddPage, {
-            titulo: data.titulo
+          this.navCtrl.push( AddPageCategory, {
+            cat: data
           });
         }
       }]
