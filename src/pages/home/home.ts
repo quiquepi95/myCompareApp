@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { AddPageCategory } from '../addItem/category/add-item-category';
+import { AddPageCategory } from '../../components/addItem/category/add-item-category';
 
 @Component({
   selector: 'page-home',

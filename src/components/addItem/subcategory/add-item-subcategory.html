@@ -1,0 +1,10 @@
+
+<ion-item>
+    <ion-label>Subcategoría</ion-label>
+    <ion-select [(ngModel)]="subCatSeleccionada" formControlName="subcategoria" (ionChange)="seleccionar()" interface="popover" placeholder="Select One">
+        <ion-option *ngFor="let dato of datosSubcategoria">{{ dato.toUpperCase() }}</ion-option>
+    </ion-select>
+</ion-item>
+
+<app-add-coche *ngIf="subCatSeleccionada === 'COCHE'"></app-add-coche>
+<app-add-moto *ngIf="subCatSeleccionada === 'MOTO'"></app-add-moto>

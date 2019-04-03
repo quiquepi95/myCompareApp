@@ -13,9 +13,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { ListasComponent } from '../components/listas.component';
-import { AddPageCategory } from '../pages/addItem/category/add-item-category';
-import { AddPageSubcategory } from '../pages/addItem/subcategory/add-item-subcategory';
+import { AddPageCategory } from '../components/addItem/category/add-item-category';
+import { AddPageSubcategory } from '../components/addItem/subcategory/add-item-subcategory';
+import { AddCochesComponent } from '../components/addItem/addCoches/addCoches';
+import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddPageSubcategory } from '../pages/addItem/subcategory/add-item-subcat
     TabsPage,
     AddPageCategory,
     AddPageSubcategory,
-    ListasComponent
+    AddCochesComponent,
+    AddMotosComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { AddPageSubcategory } from '../pages/addItem/subcategory/add-item-subcat
     TabsPage,
     AddPageCategory,
     AddPageSubcategory,
-    ListasComponent
+    AddCochesComponent,
+    AddMotosComponent
   ],
   providers: [
     StatusBar,

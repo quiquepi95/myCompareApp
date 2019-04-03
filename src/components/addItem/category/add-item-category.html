@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button (click)="goBack()"><ion-icon name="arrow-round-back"></ion-icon></button>
+        </ion-buttons>
+        <ion-title text-center>Características</ion-title>
+        <ion-buttons right>
+            <!-- <button ion-button (click)="logForm()" type="submit"><ion-icon name="checkmark"></ion-icon></button> -->
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="myForm" (ngSubmit)="logForm()">
+        <ion-list>
+            <ion-item>
+                <ion-label>Categoría</ion-label>
+                <ion-input formControlName="categoria" interface="alert" [placeholder]="category.toUpperCase()" disabled></ion-input>
+            </ion-item>
+            <page-add-subcategory [categoria]="category" ></page-add-subcategory>
+        </ion-list>
+        <button ion-button type="submit" block>Add Todo</button>
+    </form>
+</ion-content>
