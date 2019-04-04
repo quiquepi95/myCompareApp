@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, NavController } from 'ionic-angular';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ListCocheOption } from '../../../interfaces/lista';
 
 @Component({
   selector: 'page-add-category',
@@ -8,37 +8,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddPageCategory implements OnInit {
 
-  category: string = '';
-  myForm: FormGroup;
+  category: string;
+  lista: ListCocheOption;
 
   constructor(public navCtrl: NavController,
-              private navParams: NavParams,
-              public formBuilder: FormBuilder)
-              {
-                this.myForm = this.createMyForm();
-              }
+              public navParams: NavParams) {
+    this.category = this.navParams.get('cat').toUpperCase();
+  }
   
   ngOnInit(){
-    this.category = this.navParams.get('cat').toUpperCase();
+    this.lista = {
+      "categoria": this.category,
+    };
+    console.log(this.lista);
+    
     console.log(this.category);
     
   }
 
   logForm() {
-    console.log(this.myForm.value);
+    console.log(this.lista);
   }
-
-  createMyForm(){
-    return this.formBuilder.group({
-      categoria: ['', Validators.required],
-      subcategoria: ['', Validators.required],
-    });
-  }
-
-  // passwordRetry: this.formBuilder.group({
-  //   password: ['', Validators.required],
-  //   passwordConfirmation: ['', Validators.required]
-  // })
 
   goBack(){
     this.navCtrl.pop();

@@ -1,7 +1,8 @@
 
-<ion-item>
+<ion-spinner name="bubbles" *ngIf="this.category === undefined"></ion-spinner>
+<ion-item *ngIf="this.category !== undefined">
     <ion-label>Subcategoría</ion-label>
-    <ion-select [(ngModel)]="subCatSeleccionada" formControlName="subcategoria" (ionChange)="seleccionar()" interface="popover" placeholder="Select One">
+    <ion-select [(ngModel)]="subCatSeleccionada" (ionChange)="seleccionar()" interface="popover" placeholder="Select One"> <!--  formControlName="subCatSeleccionada" -->
         <ion-option *ngFor="let dato of datosSubcategoria">{{ dato.toUpperCase() }}</ion-option>
     </ion-select>
 </ion-item>

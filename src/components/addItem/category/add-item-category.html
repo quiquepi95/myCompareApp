@@ -10,13 +10,14 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <form [formGroup]="myForm" (ngSubmit)="logForm()">
+    <form (ngSubmit)="logForm()">
         <ion-list>
+            <ion-spinner name="bubbles" *ngIf="this.lista === null"></ion-spinner>
             <ion-item>
                 <ion-label>Categoría</ion-label>
-                <ion-input formControlName="categoria" interface="alert" [placeholder]="category.toUpperCase()" disabled></ion-input>
+                <ion-input text-right interface="alert" [placeholder]="category.toUpperCase()" disabled></ion-input>
             </ion-item>
-            <page-add-subcategory [categoria]="category" ></page-add-subcategory>
+            <page-add-subcategory></page-add-subcategory>
         </ion-list>
         <button ion-button type="submit" block>Add Todo</button>
     </form>

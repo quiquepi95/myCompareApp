@@ -1,28 +1,35 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AddPageCategory } from '../category/add-item-category';
+import { NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-add-subcategory',
   templateUrl: 'add-item-subcategory.html'
 })
-export class AddPageSubcategory implements OnInit {
+export class AddPageSubcategory extends AddPageCategory implements OnInit {
 
-  @Input() categoria: any;
   subCatSeleccionada: string;
 
   datosSubcategoria: any = [];
 
-  constructor(){
+  constructor(public navParams: NavParams){
+    super(null,navParams);
   }
   
   ngOnInit(){
-    console.log( this.categoria );
-    if( this.categoria === 'VEHICULOS') {
+    console.log( this.category );
+    
+    if( this.category === 'VEHICULOS') {
       this.datosSubcategoria = ['coche','moto'];
     }
   }
   
   seleccionar(){
-    console.log( this.subCatSeleccionada );
+    this.lista = {
+      "categoria": this.category,
+      "subcategoria": this.subCatSeleccionada
+    };
+    console.log( this.lista );
   }
   
 }
