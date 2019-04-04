@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { AddPageCategory } from '../category/add-item-category';
-import { NavParams } from 'ionic-angular';
+import { Component, OnInit, Output, Input, ViewChild } from '@angular/core';
+import { AddCochesComponent } from '../addCoches/addCoches';
 
 @Component({
   selector: 'page-add-subcategory',
   templateUrl: 'add-item-subcategory.html'
 })
-export class AddPageSubcategory extends AddPageCategory implements OnInit {
+export class AddPageSubcategory implements OnInit {
 
-  subCatSeleccionada: string;
+
+  
+  @ViewChild('child2') addCoches:AddCochesComponent;
+
+  @Input() category: string;
+  @Output() subCatSeleccionada: string;
 
   datosSubcategoria: any = [];
 
-  constructor(public navParams: NavParams){
-    super(null,navParams);
-  }
+  constructor(){}
   
   ngOnInit(){
     console.log( this.category );
@@ -22,14 +24,6 @@ export class AddPageSubcategory extends AddPageCategory implements OnInit {
     if( this.category === 'VEHICULOS') {
       this.datosSubcategoria = ['coche','moto'];
     }
-  }
-  
-  seleccionar(){
-    this.lista = {
-      "categoria": this.category,
-      "subcategoria": this.subCatSeleccionada
-    };
-    console.log( this.lista );
   }
   
 }

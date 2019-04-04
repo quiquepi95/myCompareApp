@@ -1,3 +1,7 @@
+export interface Lista {
+    listaCoche?: ListCocheOption[];
+}
+
 export interface ListCocheOption {
     categoria?: string;
     subcategoria?: string;
@@ -8,7 +12,7 @@ export interface ListCocheOption {
     combustible?: string;
     cambio?: string;
     velocidades?: string;
-    kilometraje?: string;
+    km?: string;
     puertas?: string;
     plazas?: string;
     consumo?: string;
@@ -17,5 +21,5 @@ export interface ListCocheOption {
     medidas?: string;
     peso?: string;
     traccion?: string;
-    extras?: any[];
+    extras?: string;
 }

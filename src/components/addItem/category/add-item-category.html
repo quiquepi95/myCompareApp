@@ -5,20 +5,17 @@
         </ion-buttons>
         <ion-title text-center>Características</ion-title>
         <ion-buttons right>
-            <!-- <button ion-button (click)="logForm()" type="submit"><ion-icon name="checkmark"></ion-icon></button> -->
+            <button ion-button (click)="logForm()"><ion-icon name="checkmark"></ion-icon></button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <form (ngSubmit)="logForm()">
-        <ion-list>
-            <ion-spinner name="bubbles" *ngIf="this.lista === null"></ion-spinner>
-            <ion-item>
-                <ion-label>Categoría</ion-label>
-                <ion-input text-right interface="alert" [placeholder]="category.toUpperCase()" disabled></ion-input>
-            </ion-item>
-            <page-add-subcategory></page-add-subcategory>
-        </ion-list>
-        <button ion-button type="submit" block>Add Todo</button>
-    </form>
+    <ion-list>
+        <ion-spinner name="bubbles" *ngIf="this.lista === null"></ion-spinner>
+        <ion-item>
+            <ion-label>Categoría</ion-label>
+            <ion-input text-right interface="alert" [placeholder]="category.toUpperCase()" disabled></ion-input>
+        </ion-item>
+        <page-add-subcategory #child1></page-add-subcategory>
+    </ion-list>
 </ion-content>
