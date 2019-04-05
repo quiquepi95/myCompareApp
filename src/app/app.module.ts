@@ -18,6 +18,10 @@ import { AddPageSubcategory } from '../components/addItem/subcategory/add-item-s
 import { AddCochesComponent } from '../components/addItem/addCoches/addCoches';
 import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
 
+// Servicios
+import { ListaService } from '../services/lista.service';
+import { ListasComponent } from '../components/listas.component';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -25,6 +29,7 @@ import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
     ContactPage,
     HomePage,
     TabsPage,
+    ListasComponent,
     AddPageCategory,
     AddPageSubcategory,
     AddCochesComponent,
@@ -41,6 +46,7 @@ import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
     ContactPage,
     HomePage,
     TabsPage,
+    ListasComponent,
     AddPageCategory,
     AddPageSubcategory,
     AddCochesComponent,
@@ -49,6 +55,7 @@ import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
   providers: [
     StatusBar,
     SplashScreen,
+    ListaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

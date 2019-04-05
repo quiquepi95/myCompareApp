@@ -30,8 +30,8 @@ export class HomePage {
       },{
         name: 'radio3',
         type: 'radio',
-        label: 'Ordenadores',
-        value: 'ordenadores'
+        label: 'Electrónica',
+        value: 'electronica'
       }],
       buttons: [{
         text: 'Cancelar'

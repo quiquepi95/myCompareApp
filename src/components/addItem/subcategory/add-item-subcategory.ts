@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input, ViewChild } from '@angular/core';
 import { AddCochesComponent } from '../addCoches/addCoches';
+import { AddMotosComponent } from '../addMotos/addMotos';
 
 @Component({
   selector: 'page-add-subcategory',
@@ -9,7 +10,8 @@ export class AddPageSubcategory implements OnInit {
 
 
   
-  @ViewChild('child2') addCoches:AddCochesComponent;
+  @ViewChild('childCoches') addCoches:AddCochesComponent;
+  @ViewChild('childMotos') addMotos:AddMotosComponent;
 
   @Input() category: string;
   @Output() subCatSeleccionada: string;
@@ -24,6 +26,13 @@ export class AddPageSubcategory implements OnInit {
     if( this.category === 'VEHICULOS') {
       this.datosSubcategoria = ['coche','moto'];
     }
+    if( this.category === 'ELECTRODOMESTICOS') {
+      this.datosSubcategoria = ['lavadora','frigoríficos','lavavajillas','secadoras','hornos','microhondas'];
+    }
+    if( this.category === 'ELECTRONICA') {
+      this.datosSubcategoria = ['PC','portátil','altavoces'];
+    }
+    
   }
   
 }
