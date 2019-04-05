@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
-import { Lista } from "../interfaces/lista";
+import { ListCocheOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
 
-    listas: Lista[] = [];
+    listas: ListCocheOption[] = [];
 
     constructor(){
         
@@ -18,8 +18,12 @@ export class ListaService {
         
     }
 
-    agregarLista( lista: Lista ) {
-        this.listas.push( lista );
+    agregarCoche( lista: ListCocheOption ) {
+        console.log( lista );
+        
+        this.listas.push(lista);
+
+        console.log( this.listas );
 
         this.guardarStorage();
     }
@@ -33,14 +37,14 @@ export class ListaService {
     // }
 
     guardarStorage() {
-        localStorage.setItem('data', JSON.stringify( this.listas ));
+        localStorage.setItem('dataLista', JSON.stringify( this.listas ));
     }
 
     cargarStorage() {
-        if ( localStorage.getItem('data') ) {
-            this.listas = JSON.parse( localStorage.getItem('data') );
+        if ( localStorage.getItem('dataLista') ) {
+            this.listas = JSON.parse( localStorage.getItem('dataLista') );
         } else {
-            this.listas = [];
+            this.listas = null;
         }
     }
     

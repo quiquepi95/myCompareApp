@@ -31,7 +31,7 @@ export class AddPageCategory implements OnInit {
     
     switch(this.subcategory.subCatSeleccionada){
       case 'COCHE':
-        this.listaCoche = {
+        let listaCoche = {
           "categoria": this.category,
           "subcategoria": this.subcategory.subCatSeleccionada,
           "marca": this.subcategory.addCoches.marca,
@@ -54,13 +54,10 @@ export class AddPageCategory implements OnInit {
         };
         console.log(this.listaCoche);
 
-        const nuevoItem = new ListCocheOption( this.listaCoche );
+        this.listaCoche = new ListCocheOption( listaCoche )
 
-        this.listaAll = {
-          "listaCoche": this.listaCoche
-        }
+        this.listaService.agregarCoche(this.listaCoche);
         
-        this.listaService.agregarLista(this.listaAll)
         break;
       case 'MOTO':
           this.listaMoto = {
