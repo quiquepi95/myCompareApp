@@ -11,6 +11,7 @@ export class Lista {
 }
 
 export class ListCocheOption {
+    id: number;
     categoria: string;
     subcategoria: string;
     marca: string;
@@ -32,6 +33,7 @@ export class ListCocheOption {
     extras?: string;
 
     constructor(lista: ListCocheOption){
+        this.id = lista.id;
         this.categoria = lista.categoria;
         this.subcategoria = lista.subcategoria;
         this.marca = lista.marca;
@@ -55,6 +57,7 @@ export class ListCocheOption {
 }
 
 export class ListMotoOption {
+    id: number;
     categoria: string;
     subcategoria: string;
     marca: string;
@@ -75,6 +78,7 @@ export class ListMotoOption {
     extras?: string;
 
         constructor(lista: ListMotoOption){
+            this.id = new Date().getTime();
             this.categoria = lista.categoria;
             this.subcategoria = lista.subcategoria;
             this.marca = lista.marca;

@@ -19,12 +19,7 @@ export class ListaService {
     }
 
     agregarCoche( lista: ListCocheOption ) {
-        console.log( lista );
-        
         this.listas.push(lista);
-
-        console.log( this.listas );
-
         this.guardarStorage();
     }
 
@@ -42,9 +37,9 @@ export class ListaService {
 
     cargarStorage() {
         if ( localStorage.getItem('dataLista') ) {
-            this.listas = JSON.parse( localStorage.getItem('dataLista') );
+            this.listas = JSON.parse( localStorage.getItem('dataLista') ); 
         } else {
-            this.listas = null;
+            this.listas = [];
         }
     }
     

@@ -32,6 +32,7 @@ export class AddPageCategory implements OnInit {
     switch(this.subcategory.subCatSeleccionada){
       case 'COCHE':
         let listaCoche = {
+          "id": new Date().getTime(),
           "categoria": this.category,
           "subcategoria": this.subcategory.subCatSeleccionada,
           "marca": this.subcategory.addCoches.marca,
@@ -52,15 +53,14 @@ export class AddPageCategory implements OnInit {
           "traccion": this.subcategory.addCoches.traccion,
           "extras": this.subcategory.addCoches.extras,
         };
-        console.log(this.listaCoche);
+        // this.listaCoche = new ListCocheOption( listaCoche )
 
-        this.listaCoche = new ListCocheOption( listaCoche )
-
-        this.listaService.agregarCoche(this.listaCoche);
+        this.listaService.agregarCoche( listaCoche );
         
         break;
       case 'MOTO':
           this.listaMoto = {
+            "id": null,
             "categoria": this.category,
             "subcategoria": this.subcategory.subCatSeleccionada,
             "marca": this.subcategory.addMotos.marca,
