@@ -22,6 +22,7 @@ import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
 
+
 @NgModule({
   declarations: [
     MyApp,

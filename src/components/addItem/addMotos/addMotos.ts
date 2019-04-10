@@ -26,6 +26,5 @@ export class AddMotosComponent implements OnInit {
     constructor(){}
 
     ngOnInit(){
-        console.log('LLego al addMotos');
     }
 }

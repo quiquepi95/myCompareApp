@@ -1,15 +1,3 @@
-export class Lista {
-    listaCoche?: ListCocheOption[];
-    listaMoto?: ListMotoOption[];
-    constructor(
-        listaCoche?: ListCocheOption,
-        listaMoto?: ListMotoOption
-        ){
-            this.listaCoche.push(listaCoche);
-            this.listaMoto.push(listaMoto);
-        }
-}
-
 export class ListCocheOption {
     id: number;
     categoria: string;
@@ -97,5 +85,49 @@ export class ListMotoOption {
             this.medidas = lista.medidas;
             this.peso = lista.peso;
             this.extras = lista.extras;
+        }
+}
+
+export class ListPCOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    SO?: string;
+    RAM?: string;
+    ROM?: string;
+    procesador?: string;
+    grafica?: string;
+    usb2?: string;
+    usb3?: string;
+    usbc?: string;
+    dvd?: string;
+    ethernet?: string;
+    audio?: string;
+    video?: string;
+    peso?: string;
+
+        constructor(lista: ListPCOption){
+            this.id = new Date().getTime();
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.SO = lista.SO;
+            this.RAM = lista.RAM;
+            this.ROM = lista.ROM;
+            this.procesador = lista.procesador;
+            this.grafica = lista.grafica;
+            this.usb2 = lista.usb2;
+            this.usb3 = lista.usb3;
+            this.usbc = lista.usbc;
+            this.dvd = lista.dvd;
+            this.ethernet = lista.ethernet;
+            this.audio = lista.audio;
+            this.video = lista.video;
+            this.peso = lista.peso;
         }
 }
