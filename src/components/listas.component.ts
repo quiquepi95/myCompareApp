@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ListaService } from "../services/lista.service";
-import { ItemSliding } from "ionic-angular";
-import { ListCocheOption } from "../interfaces/lista";
+import { ItemSliding, NavController } from "ionic-angular";
+import { AddPageCategory } from "./addItem/category/add-item-category";
 
 @Component({
     selector: 'app-listas',
@@ -11,23 +11,24 @@ export class ListasComponent {
     hiddenCoche = false;
     hiddenMoto = false;
 
-    constructor(public listaService: ListaService){}
+    constructor(public listaService: ListaService,
+                public navCtrl: NavController){}
 
     // listaSeleccionada( lista: ListCocheOption ) {
     //     this.navCtrl.push( AgregarPage, { titulo: lista.titulo, lista: lista });
     // }
 
-    borrarLista(listaCoche?: ListCocheOption, listaMoto?: ListMotoOption){
-        if(listaCoche !== null){
-            this.deseosService.borrarLista( listaCoche );
-        }
-        if(listaMoto !== null){
-            this.deseosService.borrarLista( listaMoto );
-        }
+    borrarLista(lista: any){
+        this.listaService.borrarLista( lista );
     }
 
-    editarLista( lista: ListCocheOption, slidingItem: ItemSliding ) {
+    editarLista( lista: any, slidingItem: ItemSliding ) {
         slidingItem.close();
+
+        this.navCtrl.push( AddPageCategory, {
+            cat: lista.categoria,
+            list: lista
+          });
         // const alerta = this.alertCtrl.create({
         //     title: 'Editar nombre',
         //     message: 'Editar el nombre de la lista',

@@ -14,6 +14,7 @@ export class AddPageSubcategory implements OnInit {
   @ViewChild('childMotos') addMotos:AddMotosComponent;
 
   @Input() category: string;
+  @Input() lista: any;
   @Output() subCatSeleccionada: string;
 
   datosSubcategoria: any = [];
@@ -22,6 +23,7 @@ export class AddPageSubcategory implements OnInit {
   
   ngOnInit(){
     console.log( this.category );
+    this.subCatSeleccionada = this.lista.subcategoria;
     
     if( this.category === 'VEHICULOS') {
       this.datosSubcategoria = ['coche','moto'];

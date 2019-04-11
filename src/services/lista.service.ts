@@ -19,23 +19,32 @@ export class ListaService {
         
     }
 
-    agregarCoche( lista: ListCocheOption ) {
-        this.listaCoche.push(lista);
+    agregarItem( lista: any ) {
+        switch(lista.subcategoria){
+            case 'COCHE':
+                this.listaCoche.push(lista);
+                break;
+            case 'MOTO':
+                this.listaMoto.push(lista);
+                break;
+            default:
+                console.log('No se ha podido agregar el objeto.');
+                break;
+        };
+        
         this.guardarStorage();
     }
 
-    agregarMoto( lista: ListMotoOption ) {
-        this.listaMoto.push(lista);
+    borrarLista( lista: any ) {
+        this.listaCoche = this.listaCoche.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
+        this.listaMoto = this.listaMoto.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
+
         this.guardarStorage();
     }
-
-    // borrarLista( lista: Lista ) {
-    //     this.listas = this.listas.filter( listaData => {
-    //         return listaData.id !== lista.id;
-    //     });
-
-    //     this.guardarStorage();
-    // }
 
     guardarStorage() {
         localStorage.setItem('dataCoche', JSON.stringify( this.listaCoche ));

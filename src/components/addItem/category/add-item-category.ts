@@ -11,11 +11,13 @@ export class AddPageCategory implements OnInit {
 
   @ViewChild('childSub') subcategory:AddPageSubcategory;
   category: string;
+  lista: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public listaService: ListaService) {
     this.category = this.navParams.get('cat').toUpperCase();
+    this.lista = this.navParams.get('list');
   }
   
   ngOnInit(){
@@ -52,7 +54,7 @@ export class AddPageCategory implements OnInit {
             "extras": this.subcategory.addCoches.extras,
           };
 
-          this.listaService.agregarCoche( listaCoche );
+          this.listaService.agregarItem( listaCoche );
           this.navCtrl.pop();
         }
         break;
@@ -79,7 +81,7 @@ export class AddPageCategory implements OnInit {
               "peso": this.subcategory.addMotos.peso,
               "extras": this.subcategory.addMotos.extras,
             };
-            this.listaService.agregarMoto( listaMoto );
+            this.listaService.agregarItem( listaMoto );
             this.navCtrl.pop();
           }
           break;

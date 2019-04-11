@@ -39,7 +39,8 @@ export class HomePage {
         text:'Agregar',
         handler: data => {
           this.navCtrl.push( AddPageCategory, {
-            cat: data
+            cat: data,
+            list: null
           });
         }
       }]

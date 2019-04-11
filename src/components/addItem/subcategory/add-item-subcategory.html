@@ -7,5 +7,5 @@
     </ion-select>
 </ion-item>
 
-<app-add-coche #childCoches *ngIf="subCatSeleccionada === 'COCHE'"></app-add-coche>
+<app-add-coche #childCoches [lista]="lista" *ngIf="subCatSeleccionada === 'COCHE'"></app-add-coche>
 <app-add-moto #childMotos *ngIf="subCatSeleccionada === 'MOTO'"></app-add-moto>
