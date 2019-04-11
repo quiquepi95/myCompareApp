@@ -4,21 +4,21 @@
 <div *ngIf="hiddenCoche">
     <ion-list>
         <ion-item-sliding #slidingItem *ngFor="let lista of listaService.listaCoche">
-            <!-- <ion-item-options side="left">
-                <ion-item-option (click)="editarLista(lista, slidingItem)" color="info">
-                    <ion-icon name="create"></ion-icon>
-                </ion-item-option>
-            </ion-item-options> -->
-
-            <button ion-item (click)="listaSeleccionada(lista)">
-                {{ lista.marca }} {{lista.modelo}}
-            </button>
-            
-            <ion-item-options side="right">
-                <button (click)="borrarLista(lista)" icon-only>
+            <ion-item-options side="rigth">
+                <button (click)="editarLista(lista, slidingItem)" icon-only>
+                    <ion-icon name="create" color="danger"></ion-icon>
+                </button>
+            <!-- </ion-item-options>
+            <ion-item-options side="rigth"> -->
+                <button (click)="borrarLista(lista,null)" icon-only>
                     <ion-icon name="trash" color="danger"></ion-icon>
                 </button>
             </ion-item-options>
+
+            <ion-item>
+                {{ lista.marca }} {{lista.modelo}}
+            </ion-item>
+
         </ion-item-sliding>
     </ion-list>
 </div>
@@ -28,25 +28,20 @@
 </ion-item>
 <div *ngIf="hiddenMoto">
     <ion-item-sliding #slidingItem *ngFor="let lista of listaService.listaMoto">
-        <!-- <ion-item-options side="left">
-        <button (click)="editarLista(lista, slidingItem)" ion-button icon-only color="info">
-            <ion-icon name="create"></ion-icon>
-                </button>
-        </ion-item-options> -->
+        <ion-item-options side="rigth">
+            <button (click)="editarLista(lista, slidingItem)" icon-only>
+                <ion-icon name="create" color="danger"></ion-icon>
+            </button>
+        <!-- </ion-item-options>
+        <ion-item-options side="rigth"> -->
+            <button (click)="borrarLista(null,lista)" icon-only>
+                <ion-icon name="trash" color="danger"></ion-icon>
+            </button>
+        </ion-item-options>
 
-        <button ion-item (click)="listaSeleccionada(lista)">
-        {{ lista.marca }}
-
-        <ion-note item-end>
-            <!-- {{ lista.items.length }} items -->
-        </ion-note>
+        <button ion-item>
+            {{ lista.marca }} {{lista.modelo}}
         </button>
-        
-        <!-- <ion-item-options side="right">
-                <button (click)="borrarLista(lista)" ion-button icon-only color="danger">
-                    <ion-icon name="close"></ion-icon>
-                </button>
-        </ion-item-options> -->
 
     </ion-item-sliding>
 </div>

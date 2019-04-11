@@ -13,12 +13,17 @@ export class ListasComponent {
 
     constructor(public listaService: ListaService){}
 
-    listaSeleccionada( lista: ListCocheOption ) {
-        // this.navCtrl.push( AgregarPage, { titulo: lista.titulo, lista: lista });
-    }
+    // listaSeleccionada( lista: ListCocheOption ) {
+    //     this.navCtrl.push( AgregarPage, { titulo: lista.titulo, lista: lista });
+    // }
 
-    borrarLista(lista: ListCocheOption){
-        // this.deseosService.borrarLista( lista );
+    borrarLista(listaCoche?: ListCocheOption, listaMoto?: ListMotoOption){
+        if(listaCoche !== null){
+            this.deseosService.borrarLista( listaCoche );
+        }
+        if(listaMoto !== null){
+            this.deseosService.borrarLista( listaMoto );
+        }
     }
 
     editarLista( lista: ListCocheOption, slidingItem: ItemSliding ) {
