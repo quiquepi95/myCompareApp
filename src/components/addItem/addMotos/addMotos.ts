@@ -1,4 +1,5 @@
-import { Component, OnInit, Output } from "@angular/core";
+import { Component, OnInit, Output, Input } from "@angular/core";
+import { ListMotoOption } from "../../../interfaces/lista";
 
 @Component({
     selector: 'app-add-moto',
@@ -22,9 +23,28 @@ export class AddMotosComponent implements OnInit {
     @Output() medidas: string;
     @Output() peso: string;
     @Output() extras: string;
+    @Input() lista: ListMotoOption;
     
     constructor(){}
 
     ngOnInit(){
+        if ( this.lista !== null ){
+            this.marca = this.lista.marca;
+            this.modelo = this.lista.modelo;
+            this.precio = this.lista.precio;
+            this.motor = this.lista.motor;
+            this.combustible = this.lista.combustible;
+            this.cambio = this.lista.cambio;
+            this.velocidades = this.lista.velocidades;
+            this.km = this.lista.km;
+            this.plazas = this.lista.plazas;
+            this.consumo = this.lista.consumo;
+            this.potencia = this.lista.potencia;
+            this.cilindrada = this.lista.cilindrada;
+            this.cilindros = this.lista.cilindros;
+            this.medidas = this.lista.medidas;
+            this.peso = this.lista.peso;
+            this.extras = this.lista.extras;
+        }
     }
 }

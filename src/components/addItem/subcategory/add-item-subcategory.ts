@@ -23,7 +23,9 @@ export class AddPageSubcategory implements OnInit {
   
   ngOnInit(){
     console.log( this.category );
-    this.subCatSeleccionada = this.lista.subcategoria;
+    if ( this.lista !== null ){
+      this.subCatSeleccionada = this.lista.subcategoria;
+    }
     
     if( this.category === 'VEHICULOS') {
       this.datosSubcategoria = ['coche','moto'];
