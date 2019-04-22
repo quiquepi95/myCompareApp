@@ -10,7 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 
 // Components
-import { AboutPage } from '../pages/about/about';
+import { ComparePage } from '../pages/compare/compare';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { AddPageCategory } from '../components/addItem/category/add-item-category';
@@ -26,7 +26,7 @@ import { ListasComponent } from '../components/listas.component';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    ComparePage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -43,7 +43,7 @@ import { ListasComponent } from '../components/listas.component';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    ComparePage,
     ContactPage,
     HomePage,
     TabsPage,
