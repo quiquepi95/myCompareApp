@@ -10,21 +10,11 @@
   <ion-row>
     <ion-col>
       <ion-card>
-        <ion-card-header>
-          Nombre item
-        </ion-card-header>
-        <ion-card-content>Marca</ion-card-content>
-      </ion-card>
-    </ion-col>
-
-
-    <ion-col class="right">
-      <ion-card>
-        <ion-card-header>
-          Nombre item
-        </ion-card-header>
-        <ion-card-content>Marca</ion-card-content>
+        <ion-select [(ngModel)]="catSeleccionada" interface="popover" placeholder="Select One">
+          <ion-option *ngFor="let dato of datosCategoria">{{ dato.toUpperCase() }}</ion-option>
+        </ion-select>
       </ion-card>
     </ion-col>
   </ion-row>
+  <page-compare-item [catSeleccionada]="catSeleccionada"></page-compare-item>
 </ion-content>

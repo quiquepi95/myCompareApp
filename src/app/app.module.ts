@@ -21,6 +21,7 @@ import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
 // Servicios
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
+import { CompareItemComponent } from '../pages/compare/compareItem/compareItem';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ListasComponent } from '../components/listas.component';
     AddPageCategory,
     AddPageSubcategory,
     AddCochesComponent,
-    AddMotosComponent
+    AddMotosComponent,
+    CompareItemComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { ListasComponent } from '../components/listas.component';
     AddPageCategory,
     AddPageSubcategory,
     AddCochesComponent,
-    AddMotosComponent
+    AddMotosComponent,
+    CompareItemComponent
   ],
   providers: [
     StatusBar,
