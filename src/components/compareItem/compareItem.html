@@ -1,7 +1,7 @@
 <ion-row *ngIf="catSeleccionada === 'VEHICULOS'">
     <ion-col col-6>
         <ion-card>
-            <ion-select [(ngModel)]="itemSeleccionadoIzq" interface="popover" placeholder="Select One">
+            <ion-select [(ngModel)]="itemSeleccionadoIzq" (ionChange)="itemSelectedIzq(itemSeleccionadoIzq)" interface="popover" placeholder="Select One">
                 <ion-option *ngFor="let dato of listaService.listaCoche" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaMoto" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
             </ion-select>
@@ -9,18 +9,18 @@
     </ion-col>
     <ion-col col-6>
         <ion-card>
-            <ion-select [(ngModel)]="itemSeleccionadoDrcha" interface="popover" placeholder="Select One">
+            <ion-select [(ngModel)]="itemSeleccionadoDrcha" (ionChange)="itemSelectedDrcha(itemSeleccionadoDrcha)" interface="popover" placeholder="Select One">
                 <ng-container *ngFor="let dato of listaService.listaCoche">
-                    <ion-option *ngIf="itemSeleccionadoIzq === 'COCHE'">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'COCHE'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 </ng-container>
                 <ng-container *ngFor="let dato of listaService.listaMoto">
-                    <ion-option *ngIf="itemSeleccionadoIzq === 'MOTO'">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'MOTO'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 </ng-container>
             </ion-select>
         </ion-card>
     </ion-col>
 </ion-row>
-<ion-row *ngIf="catSeleccionada === 'ELECTRODOMESTICOS'">
+<!-- <ion-row *ngIf="catSeleccionada === 'ELECTRODOMESTICOS'">
     <ion-col>
         <ion-card>
         <ion-select [(ngModel)]="itemSeleccionadoIzq" interface="popover" placeholder="Select One">
@@ -51,24 +51,5 @@
             </ion-select>
         </ion-card>
     </ion-col>
-</ion-row>
-<ion-row>
-    <ion-col col-6 *ngIf="itemSeleccionadoIzq">
-        <ion-card>
-            <ion-card-header>
-            Nombre item
-            </ion-card-header>
-            <ion-card-content>{{ itemSeleccionadoIzq }}</ion-card-content>
-        </ion-card>
-    </ion-col>
-
-
-    <ion-col col-6 class="right"  *ngIf="itemSeleccionadoDrcha">
-        <ion-card>
-            <ion-card-header>
-            Nombre item
-            </ion-card-header>
-            <ion-card-content>Marca</ion-card-content>
-        </ion-card>
-    </ion-col>
-</ion-row>
+</ion-row> -->
+<page-compare-item-coches *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'COCHE'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-coches>
