@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content (ionScroll)="logScrolling($event)">
   <ion-row>
     <ion-col>
       <ion-card>
