@@ -1,7 +1,21 @@
-<ion-row *ngIf="catSeleccionada === 'VEHICULOS'">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script><script type="text/javascript">// <![CDATA[
+    $(window).scroll(function()
+                {
+                    if ($(this).scrollTop() > 10){
+                         $('#select').addClass("fixed").fadeIn();
+                         $('.contenedor').addClass("margen").fadeIn();
+                    }
+                    else {
+                        $('#select').removeClass("fixed");
+                        $('.contenedor').removeClass("margen");
+                    }
+                });
+// ]]></script>
+
+<ion-row class="contenedor" *ngIf="catSeleccionada === 'VEHICULOS'">
     <ion-col col-6>
         <ion-card>
-            <ion-select [(ngModel)]="itemSeleccionadoIzq" (ionChange)="itemSelectedIzq(itemSeleccionadoIzq)" interface="popover" placeholder="Select One">
+            <ion-select id="select" [(ngModel)]="itemSeleccionadoIzq" (ionChange)="itemSelectedIzq(itemSeleccionadoIzq)" interface="popover" placeholder="Select One">
                 <ion-option *ngFor="let dato of listaService.listaCoche" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaMoto" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
             </ion-select>

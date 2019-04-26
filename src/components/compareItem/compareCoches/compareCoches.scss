@@ -3,32 +3,8 @@ ion-label {
 }
 
 ion-row {
-    ion-col.left {
-        margin-right: -15px !important;
-        ion-card ion-card-header {
-            padding: 0 !important;
-        }
-        ion-card ion-card-content{
-            padding: 0 !important;
-        }
-    }
-    ion-col.center {
-        margin-right: -15px !important;
-    }
-    ion-col.right {
-        margin-left: -15px !important;
+    ion-col {
+        text-align: center;
     }
   
 }
-
-
-// ion-col.left {
-//     margin-right: 5% !important;
-// }
-// ion-col.center {
-//     margin-left: 5% !important;
-//     margin-right: 5% !important;
-// }
-// ion-col.right {
-//     margin-left: 5% !important;
-// }
