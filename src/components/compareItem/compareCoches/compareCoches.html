@@ -1,8 +1,6 @@
 <ion-row>
     <ion-col col-4 *ngIf="listaIzq.length !== 0" class="left">
-            <ion-title>
-                Elementos
-            </ion-title>
+            <ion-label class="title">Elementos</ion-label>
             <ion-label>Marca: </ion-label>
             <ion-label>Modelo: </ion-label>
             <ion-label>Precio: </ion-label>
@@ -10,9 +8,7 @@
             <ion-label>Energía: </ion-label>
     </ion-col>
     <ion-col col-4 *ngIf="listaIzq.length !== 0" class="center">
-            <ion-title>
-                {{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}
-            </ion-title>
+            <ion-label class="title">{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
             <ion-label>{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
             <ion-label>{{ listaIzq[0].modelo? listaIzq[0].modelo : 'X' }}</ion-label>
             <ion-label>{{ listaIzq[0].precio? listaIzq[0].precio : 'X' }}</ion-label>
@@ -22,9 +18,7 @@
 
 
     <ion-col col-4 *ngIf="listaDrcha.length !== 0" class="center">
-            <ion-title>
-                {{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}
-            </ion-title>
+            <ion-label class="title">{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
             <ion-label>{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
             <ion-label>{{ listaDrcha[0].modelo? listaDrcha[0].modelo : 'X' }}</ion-label>
             <ion-label>{{ listaDrcha[0].precio? listaDrcha[0].precio : 'X' }}</ion-label>
