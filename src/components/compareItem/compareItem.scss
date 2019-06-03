@@ -1,4 +1,11 @@
-// .fixed {
-//     position: fixed; 
-//     top: 0;
-// }
+ion-row {
+    ion-col {
+        text-align: center;
+
+        ion-label.title {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    } 
+  
+}

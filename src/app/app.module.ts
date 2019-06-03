@@ -17,12 +17,13 @@ import { AddPageCategory } from '../components/addItem/category/add-item-categor
 import { AddPageSubcategory } from '../components/addItem/subcategory/add-item-subcategory';
 import { AddCochesComponent } from '../components/addItem/addCoches/addCoches';
 import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
+import { CompareItemComponent } from '../components/compareItem/compareItem';
+import { CompareItemCochesComponent } from '../components/compareItem/compareCoches/compareCoches';
+import { CompareItemMotosComponent } from '../components/compareItem/compareMotos/compareMotos';
 
 // Servicios
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
-import { CompareItemComponent } from '../components/compareItem/compareItem';
-import { CompareItemCochesComponent } from '../components/compareItem/compareCoches/compareCoches';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CompareItemCochesComponent } from '../components/compareItem/compareCoc
     AddCochesComponent,
     AddMotosComponent,
     CompareItemComponent,
-    CompareItemCochesComponent
+    CompareItemCochesComponent,
+    CompareItemMotosComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { CompareItemCochesComponent } from '../components/compareItem/compareCoc
     AddCochesComponent,
     AddMotosComponent,
     CompareItemComponent,
-    CompareItemCochesComponent
+    CompareItemCochesComponent,
+    CompareItemMotosComponent
   ],
   providers: [
     StatusBar,
