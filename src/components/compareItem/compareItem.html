@@ -35,22 +35,32 @@
             </ion-select>
         </ion-card>
     </ion-col>
-</ion-row>
+</ion-row> -->
+
 <ion-row *ngIf="catSeleccionada === 'ELECTRONICA'">
-    <ion-col>
+    <ion-col col-6>
         <ion-card>
-        <ion-select [(ngModel)]="itemSeleccionadoIzq" interface="popover" placeholder="Select One">
-            <ion-option *ngFor="let dato of datosCategoria">{{ dato.toUpperCase() }}</ion-option>
-        </ion-select>
-        </ion-card>
-    </ion-col>
-    <ion-col>
-        <ion-card>
-            <ion-select [(ngModel)]="itemSeleccionadoDrcha" interface="popover" placeholder="Select One">
-            <ion-option *ngFor="let dato of datosCategoria">{{ dato.toUpperCase() }}</ion-option>
+            <ion-select [(ngModel)]="itemSeleccionadoIzq" (ionChange)="itemSelectedIzq(itemSeleccionadoIzq)" interface="popover" placeholder="Select One">
+                <ion-option *ngFor="let dato of listaService.listaPC" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                <!-- <ion-option *ngFor="let dato of listaService.listaMoto" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option> -->
             </ion-select>
         </ion-card>
     </ion-col>
-</ion-row> -->
-<page-compare-item-coches *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'COCHE'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-coches>
-<page-compare-item-motos *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'MOTO'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-motos>
+    <ion-col col-6>
+        <ion-card>
+            <ion-select [(ngModel)]="itemSeleccionadoDrcha" (ionChange)="itemSelectedDrcha(itemSeleccionadoDrcha)" interface="popover" placeholder="Select One">
+                <ng-container *ngFor="let dato of listaService.listaPC">
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'PC'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                </ng-container>
+                <!-- <ng-container *ngFor="let dato of listaService.listaMoto">
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'MOTO'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                </ng-container> -->
+            </ion-select>
+        </ion-card>
+    </ion-col>
+</ion-row>
+<page-compare-item-coches *ngIf="listaIzq.length !== 0 && catSeleccionada === 'VEHICULOS' && listaIzq[0].subcategoria === 'COCHE'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-coches>
+<page-compare-item-motos *ngIf="listaIzq.length !== 0 && catSeleccionada === 'VEHICULOS' && listaIzq[0].subcategoria === 'MOTO'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-motos>
+
+
+<page-compare-item-pc *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRONICA' && listaIzq[0].subcategoria === 'PC'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-pc>

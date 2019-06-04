@@ -13,13 +13,19 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ComparePage } from '../pages/compare/compare';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+
+// Añadir
 import { AddPageCategory } from '../components/addItem/category/add-item-category';
 import { AddPageSubcategory } from '../components/addItem/subcategory/add-item-subcategory';
 import { AddCochesComponent } from '../components/addItem/addCoches/addCoches';
 import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
+import { AddPcComponent } from '../components/addItem/addPC/addPC';
+
+// Comparar
 import { CompareItemComponent } from '../components/compareItem/compareItem';
 import { CompareItemCochesComponent } from '../components/compareItem/compareCoches/compareCoches';
 import { CompareItemMotosComponent } from '../components/compareItem/compareMotos/compareMotos';
+import { CompareItemPcComponent } from '../components/compareItem/comparePC/comparePC';
 
 // Servicios
 import { ListaService } from '../services/lista.service';
@@ -38,9 +44,11 @@ import { ListasComponent } from '../components/listas.component';
     AddPageSubcategory,
     AddCochesComponent,
     AddMotosComponent,
+    AddPcComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
-    CompareItemMotosComponent
+    CompareItemMotosComponent,
+    CompareItemPcComponent
   ],
   imports: [
     BrowserModule,
@@ -58,9 +66,11 @@ import { ListasComponent } from '../components/listas.component';
     AddPageSubcategory,
     AddCochesComponent,
     AddMotosComponent,
+    AddPcComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
-    CompareItemMotosComponent
+    CompareItemMotosComponent,
+    CompareItemPcComponent
   ],
   providers: [
     StatusBar,

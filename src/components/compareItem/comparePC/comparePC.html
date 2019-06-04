@@ -1,0 +1,61 @@
+<ion-row>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">Elementos</ion-label>
+            <ion-label>Marca: </ion-label>
+            <ion-label>Modelo: </ion-label>
+            <ion-label>Precio: </ion-label>
+            <ion-label>SO: </ion-label>
+            <ion-label>RAM: </ion-label>
+            <ion-label>ROM: </ion-label>
+            <ion-label>procesador: </ion-label>
+            <ion-label>grafica: </ion-label>
+            <ion-label>usb2: </ion-label>
+            <ion-label>usb3: </ion-label>
+            <ion-label>usbc: </ion-label>
+            <ion-label>dvd: </ion-label>
+            <ion-label>ethernet: </ion-label>
+            <ion-label>audio: </ion-label>
+            <ion-label>video: </ion-label>
+            <ion-label>peso: </ion-label>
+    </ion-col>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].modelo? listaIzq[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].precio? listaIzq[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].SO? listaIzq[0].SO : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].RAM? listaIzq[0].RAM : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].ROM? listaIzq[0].ROM : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].procesador? listaIzq[0].procesador : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].grafica? listaIzq[0].grafica : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].usb2? listaIzq[0].usb2 : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].usb3? listaIzq[0].usb3 : 'X' }}<br/><br/></ion-label>
+            <ion-label>{{ listaIzq[0].usbc? listaIzq[0].usbc : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].dvd? listaIzq[0].dvd : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].ethernet? listaIzq[0].ethernet : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].audio? listaIzq[0].audio : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].video? listaIzq[0].video : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].peso? listaIzq[0].peso : 'X' }}</ion-label>
+    </ion-col>
+
+
+    <ion-col col-4 *ngIf="listaDrcha.length !== 0">
+            <ion-label class="title">{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].modelo? listaDrcha[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].precio? listaDrcha[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].SO? listaDrcha[0].SO : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].RAM? listaDrcha[0].RAM : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].ROM? listaDrcha[0].ROM : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].procesador? listaDrcha[0].procesador : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].grafica? listaDrcha[0].grafica : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].usb2? listaDrcha[0].usb2 : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].usb3? listaDrcha[0].usb3 : 'X' }}<br/><br/></ion-label>
+            <ion-label>{{ listaDrcha[0].usbc? listaDrcha[0].usbc : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].dvd? listaDrcha[0].dvd : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].ethernet? listaDrcha[0].ethernet : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].audio? listaDrcha[0].audio : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].video? listaDrcha[0].video : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].peso? listaDrcha[0].peso : 'X' }}</ion-label>
+    </ion-col>
+</ion-row>

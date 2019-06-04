@@ -10,6 +10,7 @@ import { AddPageCategory } from "./addItem/category/add-item-category";
 export class ListasComponent {
     hiddenCoche = false;
     hiddenMoto = false;
+    hiddenPC = false;
 
     constructor(public listaService: ListaService,
                 public navCtrl: NavController){}

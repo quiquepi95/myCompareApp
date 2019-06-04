@@ -138,29 +138,54 @@ export class AddPageCategory implements OnInit {
           }
           break;
           case 'PC':
-          if(this.subcategory.addMotos.marca){
-            // let listaPC = {
-            //   "id": new Date().getTime(),
-            //   "categoria": this.category,
-            //   "subcategoria": this.subcategory.subCatSeleccionada,
-            //   "marca": this.subcategory.addMotos.marca,
-            //   "modelo": this.subcategory.addMotos.modelo,
-            //   "precio": this.subcategory.addMotos.precio,
-            //   "SO": this.subcategory.addMotos.SO,
-            //   "RAM": this.subcategory.addMotos.RAM,
-            //   "ROM": this.subcategory.addMotos.ROM,
-            //   "procesador": this.subcategory.addMotos.procesador,
-            //   "grafica": this.subcategory.addMotos.grafica,
-            //   "usb2": this.subcategory.addMotos.usb2,
-            //   "usb3": this.subcategory.addMotos.usb3,
-            //   "usbc": this.subcategory.addMotos.usbc,
-            //   "dvd": this.subcategory.addMotos.dvd,
-            //   "ethernet": this.subcategory.addMotos.ethernet,
-            //   "audio": this.subcategory.addMotos.audio,
-            //   "video": this.subcategory.addMotos.video,
-            //   "peso": this.subcategory.addMotos.peso,
-            // };
-            // this.listaService.agregarMoto( listaPC );
+          if(this.subcategory.addPC.marca){
+            let listaPC = {};
+          if ( this.lista === null ){
+            listaPC = {
+                "id": new Date().getTime(),
+                "categoria": this.category,
+                "subcategoria": this.subcategory.subCatSeleccionada,
+                "marca": this.subcategory.addPC.marca,
+                "modelo": this.subcategory.addPC.modelo,
+                "precio": this.subcategory.addPC.precio,
+                "SO": this.subcategory.addPC.SO,
+                "RAM": this.subcategory.addPC.RAM,
+                "ROM": this.subcategory.addPC.ROM,
+                "procesador": this.subcategory.addPC.procesador,
+                "GPU": this.subcategory.addPC.grafica,
+                "usb2": this.subcategory.addPC.usb2,
+                "usb3": this.subcategory.addPC.usb3,
+                "usbc": this.subcategory.addPC.usbc,
+                "dvd": this.subcategory.addPC.dvd,
+                "ethernet": this.subcategory.addPC.ethernet,
+                "audio": this.subcategory.addPC.audio,
+                "video": this.subcategory.addPC.video,
+                "peso": this.subcategory.addPC.peso,
+              };
+            } else {
+              listaPC = {
+                "id": this.lista.id,
+                "categoria": this.category,
+                "subcategoria": this.subcategory.subCatSeleccionada,
+                "marca": this.subcategory.addPC.marca,
+                "modelo": this.subcategory.addPC.modelo,
+                "precio": this.subcategory.addPC.precio,
+                "SO": this.subcategory.addPC.SO,
+                "RAM": this.subcategory.addPC.RAM,
+                "ROM": this.subcategory.addPC.ROM,
+                "procesador": this.subcategory.addPC.procesador,
+                "GPU": this.subcategory.addPC.grafica,
+                "usb2": this.subcategory.addPC.usb2,
+                "usb3": this.subcategory.addPC.usb3,
+                "usbc": this.subcategory.addPC.usbc,
+                "dvd": this.subcategory.addPC.dvd,
+                "ethernet": this.subcategory.addPC.ethernet,
+                "audio": this.subcategory.addPC.audio,
+                "video": this.subcategory.addPC.video,
+                "peso": this.subcategory.addPC.peso,
+              };
+            }
+            this.listaService.agregarItem( listaPC );
             this.navCtrl.pop();
           }
           break;

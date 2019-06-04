@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
-import { ListCocheOption, ListMotoOption } from "../interfaces/lista";
+import { ListCocheOption, ListMotoOption, ListPCOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
 
     listaCoche: ListCocheOption[] = [];
     listaMoto: ListMotoOption[] = [];
+    listaPC: ListPCOption[] = [];
 
     constructor(){
         
@@ -27,6 +28,9 @@ export class ListaService {
             case 'MOTO':
                 this.listaMoto.push(lista);
                 break;
+            case 'PC':
+                this.listaPC.push(lista);
+                break;
             default:
                 console.log('No se ha podido agregar el objeto.');
                 break;
@@ -42,6 +46,9 @@ export class ListaService {
         this.listaMoto = this.listaMoto.filter( listaData => {
             return listaData.id !== lista.id;
         });
+        this.listaPC = this.listaPC.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
 
         this.guardarStorage();
     }
@@ -49,6 +56,7 @@ export class ListaService {
     guardarStorage() {
         localStorage.setItem('dataCoche', JSON.stringify( this.listaCoche ));
         localStorage.setItem('dataMoto', JSON.stringify( this.listaMoto ));
+        localStorage.setItem('dataPC', JSON.stringify( this.listaPC ));
     }
 
     cargarStorage() {
@@ -63,6 +71,12 @@ export class ListaService {
             this.listaMoto = JSON.parse( localStorage.getItem('dataMoto') );
         } else{
             this.listaMoto = [];
+        }
+
+        if( localStorage.getItem('dataPC') ){
+            this.listaPC = JSON.parse( localStorage.getItem('dataPC') );
+        } else{
+            this.listaPC = [];
         }
 
 

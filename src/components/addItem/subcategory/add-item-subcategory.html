@@ -8,4 +8,10 @@
 </ion-item>
 
 <app-add-coche #childCoches [lista]="lista" *ngIf="subCatSeleccionada === 'COCHE'"></app-add-coche>
-<app-add-moto #childMotos *ngIf="subCatSeleccionada === 'MOTO'"></app-add-moto>
+<app-add-moto #childMotos [lista]="lista" *ngIf="subCatSeleccionada === 'MOTO'"></app-add-moto>
+
+
+
+
+
+<app-add-pc #childPC [lista]="lista" *ngIf="subCatSeleccionada === 'PC'"></app-add-pc>

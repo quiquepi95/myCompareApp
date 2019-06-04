@@ -66,7 +66,7 @@ export class ListMotoOption {
     extras?: string;
 
         constructor(lista: ListMotoOption){
-            this.id = new Date().getTime();
+            this.id = lista.id;
             this.categoria = lista.categoria;
             this.subcategoria = lista.subcategoria;
             this.marca = lista.marca;
@@ -110,7 +110,7 @@ export class ListPCOption {
     peso?: string;
 
         constructor(lista: ListPCOption){
-            this.id = new Date().getTime();
+            this.id = lista.id;
             this.categoria = lista.categoria;
             this.subcategoria = lista.subcategoria;
             this.marca = lista.marca;
