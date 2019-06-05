@@ -52,26 +52,52 @@
 
 <!-- PC -->
 <ion-item (click)="hiddenPC = !hiddenPC">
-        <ion-label text-center><strong>PC</strong> <ion-badge color="light" item-end>{{listaService.listaPC.length}}</ion-badge></ion-label>
-    </ion-item>
-    <div *ngIf="hiddenPC">
-        <ion-list>
-            <ion-item-sliding #slidingItem *ngFor="let lista of listaService.listaPC">
-                <ion-item-options side="rigth">
-                    <button (click)="editarLista(lista, slidingItem)" icon-only>
-                        <ion-icon name="create" color="danger"></ion-icon>
-                    </button>
-                <!-- </ion-item-options>
-                <ion-item-options side="rigth"> -->
-                    <button (click)="borrarLista(lista)" icon-only>
-                        <ion-icon name="trash" color="danger"></ion-icon>
-                    </button>
-                </ion-item-options>
-    
-                <ion-item>
-                    {{ lista.marca }} {{lista.modelo}}
-                </ion-item>
-    
-            </ion-item-sliding>
-        </ion-list>
-    </div>
+    <ion-label text-center><strong>PC</strong> <ion-badge color="light" item-end>{{listaService.listaPC.length}}</ion-badge></ion-label>
+</ion-item>
+<div *ngIf="hiddenPC">
+    <ion-list>
+        <ion-item-sliding #slidingItem *ngFor="let lista of listaService.listaPC">
+            <ion-item-options side="rigth">
+                <button (click)="editarLista(lista, slidingItem)" icon-only>
+                    <ion-icon name="create" color="danger"></ion-icon>
+                </button>
+            <!-- </ion-item-options>
+            <ion-item-options side="rigth"> -->
+                <button (click)="borrarLista(lista)" icon-only>
+                    <ion-icon name="trash" color="danger"></ion-icon>
+                </button>
+            </ion-item-options>
+
+            <ion-item>
+                {{ lista.marca }} {{lista.modelo}}
+            </ion-item>
+
+        </ion-item-sliding>
+    </ion-list>
+</div>
+
+<!-- LAVADORA -->
+<ion-item (click)="hiddenLavadora = !hiddenLavadora">
+    <ion-label text-center><strong>Lavadora</strong> <ion-badge color="light" item-end>{{listaService.listaLavadora.length}}</ion-badge></ion-label>
+</ion-item>
+<div *ngIf="hiddenLavadora">
+    <ion-list>
+        <ion-item-sliding #slidingItem *ngFor="let lista of listaService.listaLavadora">
+            <ion-item-options side="rigth">
+                <button (click)="editarLista(lista, slidingItem)" icon-only>
+                    <ion-icon name="create" color="danger"></ion-icon>
+                </button>
+            <!-- </ion-item-options>
+            <ion-item-options side="rigth"> -->
+                <button (click)="borrarLista(lista)" icon-only>
+                    <ion-icon name="trash" color="danger"></ion-icon>
+                </button>
+            </ion-item-options>
+
+            <ion-item>
+                {{ lista.marca }} {{lista.modelo}}
+            </ion-item>
+
+        </ion-item-sliding>
+    </ion-list>
+</div>

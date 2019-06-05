@@ -20,12 +20,14 @@ import { AddPageSubcategory } from '../components/addItem/subcategory/add-item-s
 import { AddCochesComponent } from '../components/addItem/addCoches/addCoches';
 import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
 import { AddPcComponent } from '../components/addItem/addPC/addPC';
+import { AddLavadoraComponent } from '../components/addItem/addLavadora/addLavadora';
 
 // Comparar
 import { CompareItemComponent } from '../components/compareItem/compareItem';
 import { CompareItemCochesComponent } from '../components/compareItem/compareCoches/compareCoches';
 import { CompareItemMotosComponent } from '../components/compareItem/compareMotos/compareMotos';
 import { CompareItemPcComponent } from '../components/compareItem/comparePC/comparePC';
+import { CompareItemLavadoraComponent } from '../components/compareItem/compareLavadora/compareLavadora';
 
 // Servicios
 import { ListaService } from '../services/lista.service';
@@ -45,10 +47,12 @@ import { ListasComponent } from '../components/listas.component';
     AddCochesComponent,
     AddMotosComponent,
     AddPcComponent,
+    AddLavadoraComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
-    CompareItemPcComponent
+    CompareItemPcComponent,
+    CompareItemLavadoraComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +71,12 @@ import { ListasComponent } from '../components/listas.component';
     AddCochesComponent,
     AddMotosComponent,
     AddPcComponent,
+    AddLavadoraComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
-    CompareItemPcComponent
+    CompareItemPcComponent,
+    CompareItemLavadoraComponent
   ],
   providers: [
     StatusBar,

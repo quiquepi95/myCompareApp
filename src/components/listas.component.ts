@@ -11,6 +11,7 @@ export class ListasComponent {
     hiddenCoche = false;
     hiddenMoto = false;
     hiddenPC = false;
+    hiddenLavadora = false;
 
     constructor(public listaService: ListaService,
                 public navCtrl: NavController){}
@@ -30,29 +31,6 @@ export class ListasComponent {
             cat: lista.categoria,
             list: lista
           });
-        // const alerta = this.alertCtrl.create({
-        //     title: 'Editar nombre',
-        //     message: 'Editar el nombre de la lista',
-        //     inputs: [{
-        //         name: 'titulo',
-        //         placeholder: 'Nombre de la lista',
-        //         value: lista.titulo
-        //     }],
-        //     buttons: [{
-        //         text: 'Cancelar'
-        //     },{
-        //         text: 'Guardar',
-        //         handler: data => {
-        //             if( data.titulo.length === 0 ){
-        //                 return;
-        //             }
-                    
-        //             lista.titulo = data.titulo;
-        //             this.deseosService.guardarStorage();
-        //         }
-        //     }]
-        // });
-
-        // alerta.present();
+        
     }
 }

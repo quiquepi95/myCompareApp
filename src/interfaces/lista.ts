@@ -88,6 +88,47 @@ export class ListMotoOption {
         }
 }
 
+export class ListLavadoraOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    velocidad?: string;
+    clasfEnergia?: string;
+    tipoCarga?: string;
+    capTambor?: string;
+    capCarga?: string;
+    medidas?: string;
+    consumoAgua?: string;
+    consumoEnergia?: string;
+    frecuencia?: string;
+    extra?: string;
+
+        constructor(lista: ListLavadoraOption){
+            this.id = lista.id;
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.velocidad = lista.velocidad;
+            this.clasfEnergia = lista.clasfEnergia;
+            this.tipoCarga = lista.tipoCarga;
+            this.capTambor = lista.capTambor;
+            this.capCarga = lista.capCarga;
+            this.medidas = lista.medidas;
+            this.consumoAgua = lista.consumoAgua;
+            this.consumoEnergia = lista.consumoEnergia;
+            this.frecuencia = lista.frecuencia;
+            this.extra = lista.extra;
+        }
+}
+
+
+
+
 export class ListPCOption {
     id: number;
     categoria: string;

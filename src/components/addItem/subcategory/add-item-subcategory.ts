@@ -2,6 +2,7 @@ import { Component, OnInit, Output, Input, ViewChild } from '@angular/core';
 import { AddCochesComponent } from '../addCoches/addCoches';
 import { AddMotosComponent } from '../addMotos/addMotos';
 import { AddPcComponent } from '../addPC/addPC';
+import { AddLavadoraComponent } from '../addLavadora/addLavadora';
 
 @Component({
   selector: 'page-add-subcategory',
@@ -14,6 +15,7 @@ export class AddPageSubcategory implements OnInit {
   @ViewChild('childCoches') addCoches:AddCochesComponent;
   @ViewChild('childMotos') addMotos:AddMotosComponent;
   @ViewChild('childPC') addPC:AddPcComponent;
+  @ViewChild('childLavadora') addLavadora:AddLavadoraComponent;
 
   @Input() category: string;
   @Input() lista: any;

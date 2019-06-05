@@ -90,105 +90,151 @@ export class AddPageCategory implements OnInit {
           let listaMoto = {};
           if ( this.lista === null ){
             listaMoto = {
-                "id": new Date().getTime(),
-                "categoria": this.category,
-                "subcategoria": this.subcategory.subCatSeleccionada,
-                "marca": this.subcategory.addMotos.marca,
-                "modelo": this.subcategory.addMotos.modelo,
-                "precio": this.subcategory.addMotos.precio,
-                "motor": this.subcategory.addMotos.motor,
-                "combustible": this.subcategory.addMotos.combustible,
-                "cambio": this.subcategory.addMotos.cambio,
-                "velocidades": this.subcategory.addMotos.velocidades,
-                "km": this.subcategory.addMotos.km,
-                "plazas": this.subcategory.addMotos.plazas,
-                "consumo": this.subcategory.addMotos.consumo,
-                "potencia": this.subcategory.addMotos.potencia,
-                "cilindrada": this.subcategory.addMotos.cilindrada,
-                "cilindros": this.subcategory.addMotos.cilindros,
-                "medidas": this.subcategory.addMotos.medidas,
-                "peso": this.subcategory.addMotos.peso,
-                "extras": this.subcategory.addMotos.extras,
-              };
-            } else {
-              listaMoto = {
-                "id": this.lista.id,
-                "categoria": this.category,
-                "subcategoria": this.subcategory.subCatSeleccionada,
-                "marca": this.subcategory.addMotos.marca,
-                "modelo": this.subcategory.addMotos.modelo,
-                "precio": this.subcategory.addMotos.precio,
-                "motor": this.subcategory.addMotos.motor,
-                "combustible": this.subcategory.addMotos.combustible,
-                "cambio": this.subcategory.addMotos.cambio,
-                "velocidades": this.subcategory.addMotos.velocidades,
-                "km": this.subcategory.addMotos.km,
-                "plazas": this.subcategory.addMotos.plazas,
-                "consumo": this.subcategory.addMotos.consumo,
-                "potencia": this.subcategory.addMotos.potencia,
-                "cilindrada": this.subcategory.addMotos.cilindrada,
-                "cilindros": this.subcategory.addMotos.cilindros,
-                "medidas": this.subcategory.addMotos.medidas,
-                "peso": this.subcategory.addMotos.peso,
-                "extras": this.subcategory.addMotos.extras,
-              };
-            }
-            this.listaService.agregarItem( listaMoto );
-            this.navCtrl.pop();
+              "id": new Date().getTime(),
+              "categoria": this.category,
+              "subcategoria": this.subcategory.subCatSeleccionada,
+              "marca": this.subcategory.addMotos.marca,
+              "modelo": this.subcategory.addMotos.modelo,
+              "precio": this.subcategory.addMotos.precio,
+              "motor": this.subcategory.addMotos.motor,
+              "combustible": this.subcategory.addMotos.combustible,
+              "cambio": this.subcategory.addMotos.cambio,
+              "velocidades": this.subcategory.addMotos.velocidades,
+              "km": this.subcategory.addMotos.km,
+              "plazas": this.subcategory.addMotos.plazas,
+              "consumo": this.subcategory.addMotos.consumo,
+              "potencia": this.subcategory.addMotos.potencia,
+              "cilindrada": this.subcategory.addMotos.cilindrada,
+              "cilindros": this.subcategory.addMotos.cilindros,
+              "medidas": this.subcategory.addMotos.medidas,
+              "peso": this.subcategory.addMotos.peso,
+              "extras": this.subcategory.addMotos.extras,
+            };
+          } else {
+            listaMoto = {
+              "id": this.lista.id,
+              "categoria": this.category,
+              "subcategoria": this.subcategory.subCatSeleccionada,
+              "marca": this.subcategory.addMotos.marca,
+              "modelo": this.subcategory.addMotos.modelo,
+              "precio": this.subcategory.addMotos.precio,
+              "motor": this.subcategory.addMotos.motor,
+              "combustible": this.subcategory.addMotos.combustible,
+              "cambio": this.subcategory.addMotos.cambio,
+              "velocidades": this.subcategory.addMotos.velocidades,
+              "km": this.subcategory.addMotos.km,
+              "plazas": this.subcategory.addMotos.plazas,
+              "consumo": this.subcategory.addMotos.consumo,
+              "potencia": this.subcategory.addMotos.potencia,
+              "cilindrada": this.subcategory.addMotos.cilindrada,
+              "cilindros": this.subcategory.addMotos.cilindros,
+              "medidas": this.subcategory.addMotos.medidas,
+              "peso": this.subcategory.addMotos.peso,
+              "extras": this.subcategory.addMotos.extras,
+            };
           }
-          break;
-          case 'PC':
-          if(this.subcategory.addPC.marca){
-            let listaPC = {};
-          if ( this.lista === null ){
+          this.listaService.agregarItem( listaMoto );
+          this.navCtrl.pop();
+        }
+        break;
+        case 'PC':
+        if(this.subcategory.addPC.marca){
+          let listaPC = {};
+        if ( this.lista === null ){
+          listaPC = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addPC.marca,
+            "modelo": this.subcategory.addPC.modelo,
+            "precio": this.subcategory.addPC.precio,
+            "SO": this.subcategory.addPC.SO,
+            "RAM": this.subcategory.addPC.RAM,
+            "ROM": this.subcategory.addPC.ROM,
+            "procesador": this.subcategory.addPC.procesador,
+            "GPU": this.subcategory.addPC.grafica,
+            "usb2": this.subcategory.addPC.usb2,
+            "usb3": this.subcategory.addPC.usb3,
+            "usbc": this.subcategory.addPC.usbc,
+            "dvd": this.subcategory.addPC.dvd,
+            "ethernet": this.subcategory.addPC.ethernet,
+            "audio": this.subcategory.addPC.audio,
+            "video": this.subcategory.addPC.video,
+            "peso": this.subcategory.addPC.peso,
+          };
+          } else {
             listaPC = {
-                "id": new Date().getTime(),
-                "categoria": this.category,
-                "subcategoria": this.subcategory.subCatSeleccionada,
-                "marca": this.subcategory.addPC.marca,
-                "modelo": this.subcategory.addPC.modelo,
-                "precio": this.subcategory.addPC.precio,
-                "SO": this.subcategory.addPC.SO,
-                "RAM": this.subcategory.addPC.RAM,
-                "ROM": this.subcategory.addPC.ROM,
-                "procesador": this.subcategory.addPC.procesador,
-                "GPU": this.subcategory.addPC.grafica,
-                "usb2": this.subcategory.addPC.usb2,
-                "usb3": this.subcategory.addPC.usb3,
-                "usbc": this.subcategory.addPC.usbc,
-                "dvd": this.subcategory.addPC.dvd,
-                "ethernet": this.subcategory.addPC.ethernet,
-                "audio": this.subcategory.addPC.audio,
-                "video": this.subcategory.addPC.video,
-                "peso": this.subcategory.addPC.peso,
-              };
-            } else {
-              listaPC = {
-                "id": this.lista.id,
-                "categoria": this.category,
-                "subcategoria": this.subcategory.subCatSeleccionada,
-                "marca": this.subcategory.addPC.marca,
-                "modelo": this.subcategory.addPC.modelo,
-                "precio": this.subcategory.addPC.precio,
-                "SO": this.subcategory.addPC.SO,
-                "RAM": this.subcategory.addPC.RAM,
-                "ROM": this.subcategory.addPC.ROM,
-                "procesador": this.subcategory.addPC.procesador,
-                "GPU": this.subcategory.addPC.grafica,
-                "usb2": this.subcategory.addPC.usb2,
-                "usb3": this.subcategory.addPC.usb3,
-                "usbc": this.subcategory.addPC.usbc,
-                "dvd": this.subcategory.addPC.dvd,
-                "ethernet": this.subcategory.addPC.ethernet,
-                "audio": this.subcategory.addPC.audio,
-                "video": this.subcategory.addPC.video,
-                "peso": this.subcategory.addPC.peso,
-              };
-            }
-            this.listaService.agregarItem( listaPC );
-            this.navCtrl.pop();
+              "id": this.lista.id,
+              "categoria": this.category,
+              "subcategoria": this.subcategory.subCatSeleccionada,
+              "marca": this.subcategory.addPC.marca,
+              "modelo": this.subcategory.addPC.modelo,
+              "precio": this.subcategory.addPC.precio,
+              "SO": this.subcategory.addPC.SO,
+              "RAM": this.subcategory.addPC.RAM,
+              "ROM": this.subcategory.addPC.ROM,
+              "procesador": this.subcategory.addPC.procesador,
+              "GPU": this.subcategory.addPC.grafica,
+              "usb2": this.subcategory.addPC.usb2,
+              "usb3": this.subcategory.addPC.usb3,
+              "usbc": this.subcategory.addPC.usbc,
+              "dvd": this.subcategory.addPC.dvd,
+              "ethernet": this.subcategory.addPC.ethernet,
+              "audio": this.subcategory.addPC.audio,
+              "video": this.subcategory.addPC.video,
+              "peso": this.subcategory.addPC.peso,
+            };
           }
-          break;
+          this.listaService.agregarItem( listaPC );
+          this.navCtrl.pop();
+        }
+        break;
+        case 'LAVADORA':
+        if(this.subcategory.addLavadora.marca){
+          let listaLavadora = {};
+        if ( this.lista === null ){
+          listaLavadora = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addLavadora.marca,
+            "modelo": this.subcategory.addLavadora.modelo,
+            "precio": this.subcategory.addLavadora.precio,
+            "velocidad": this.subcategory.addLavadora.velocidad,
+            "clasfEnergia": this.subcategory.addLavadora.clasfEnergia,
+            "tipoCarga": this.subcategory.addLavadora.tipoCarga,
+            "capTambor": this.subcategory.addLavadora.capTambor,
+            "capCarga": this.subcategory.addLavadora.capCarga,
+            "medidas": this.subcategory.addLavadora.medidas,
+            "consumoAgua": this.subcategory.addLavadora.consumoAgua,
+            "consumoEnergia": this.subcategory.addLavadora.consumoEnergia,
+            "frecuencia": this.subcategory.addLavadora.frecuencia,
+            "extra": this.subcategory.addLavadora.extra,
+          };
+        } else {
+          listaLavadora = {
+            "id": this.lista.id,
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addLavadora.marca,
+            "modelo": this.subcategory.addLavadora.modelo,
+            "precio": this.subcategory.addLavadora.precio,
+            "velocidad": this.subcategory.addLavadora.velocidad,
+            "clasfEnergia": this.subcategory.addLavadora.clasfEnergia,
+            "tipoCarga": this.subcategory.addLavadora.tipoCarga,
+            "capTambor": this.subcategory.addLavadora.capTambor,
+            "capCarga": this.subcategory.addLavadora.capCarga,
+            "medidas": this.subcategory.addLavadora.medidas,
+            "consumoAgua": this.subcategory.addLavadora.consumoAgua,
+            "consumoEnergia": this.subcategory.addLavadora.consumoEnergia,
+            "frecuencia": this.subcategory.addLavadora.frecuencia,
+            "extra": this.subcategory.addLavadora.extra,
+          };
+        }
+        this.listaService.agregarItem( listaLavadora );
+        this.navCtrl.pop();
+        }
+        break;
         default:
           console.log('No hay datos disponibles');
           break;
