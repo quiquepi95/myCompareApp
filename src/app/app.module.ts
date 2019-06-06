@@ -32,6 +32,7 @@ import { CompareItemLavadoraComponent } from '../components/compareItem/compareL
 // Servicios
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
+import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { ListasComponent } from '../components/listas.component';
     AddMotosComponent,
     AddPcComponent,
     AddLavadoraComponent,
+    AddFrigoComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
@@ -72,6 +74,7 @@ import { ListasComponent } from '../components/listas.component';
     AddMotosComponent,
     AddPcComponent,
     AddLavadoraComponent,
+    AddFrigoComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption } from "../interfaces/lista";
+import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
@@ -8,6 +8,7 @@ export class ListaService {
     listaMoto: ListMotoOption[] = [];
     listaPC: ListPCOption[] = [];
     listaLavadora: ListLavadoraOption[] = [];
+    listaFrigo: ListFrigoOption[] = [];
 
     constructor(){
         
@@ -35,6 +36,9 @@ export class ListaService {
             case 'LAVADORA':
                 this.listaLavadora.push(lista);
                 break;
+            case 'FRIGORÍFICOS':
+                this.listaFrigo.push(lista);
+                break;
             default:
                 console.log('No se ha podido agregar el objeto.');
                 break;
@@ -56,6 +60,9 @@ export class ListaService {
         this.listaLavadora = this.listaLavadora.filter( listaData => {
             return listaData.id !== lista.id;
         });
+        this.listaFrigo = this.listaFrigo.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
 
         this.guardarStorage();
     }
@@ -65,6 +72,7 @@ export class ListaService {
         localStorage.setItem('dataMoto', JSON.stringify( this.listaMoto ));
         localStorage.setItem('dataPC', JSON.stringify( this.listaPC ));
         localStorage.setItem('dataLavadora', JSON.stringify( this.listaLavadora ));
+        localStorage.setItem('dataFrigo', JSON.stringify( this.listaFrigo ));
     }
 
     cargarStorage() {
@@ -91,6 +99,12 @@ export class ListaService {
             this.listaLavadora = JSON.parse( localStorage.getItem('dataLavadora') );
         } else{
             this.listaLavadora = [];
+        }
+
+        if( localStorage.getItem('dataFrigo') ){
+            this.listaFrigo = JSON.parse( localStorage.getItem('dataFrigo') );
+        } else{
+            this.listaFrigo = [];
         }
 
 

@@ -1,3 +1,4 @@
+/* VEHÍCULO */
 export class ListCocheOption {
     id: number;
     categoria: string;
@@ -88,6 +89,7 @@ export class ListMotoOption {
         }
 }
 
+/* ELECTRODOMÉSTICOS */
 export class ListLavadoraOption {
     id: number;
     categoria: string;
@@ -126,9 +128,60 @@ export class ListLavadoraOption {
         }
 }
 
+export class ListFrigoOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    tipoFrigo?: string;
+    capBrutaRefrig?: string;
+    capBrutaCongel?: string;
+    capBrutaTotal?: string;
+    capUtilRefrig?: string;
+    capUtilCongel?: string;
+    capUtilTotal?: string;
+    tecnologia?: string;
+    ctrlTemp?: string;
+    tirador?: string;
+    indicador?: string;
+    funcIndicador?: string;
+    medidas?: string;
+    clasfEnergia?: string;
+    consumo?: string;
+    fecuencia?: string;
+    tension?: string;
+    alimentacion?: string;
 
+        constructor(lista: ListFrigoOption){
+            this.id = lista.id;
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.capBrutaRefrig = lista.capBrutaRefrig;
+            this.capBrutaCongel = lista.capBrutaCongel;
+            this.capBrutaTotal = lista.capBrutaTotal;
+            this.capUtilRefrig = lista.capUtilRefrig;
+            this.capUtilCongel = lista.capUtilCongel;
+            this.capUtilTotal = lista.capUtilTotal;
+            this.tecnologia = lista.tecnologia;
+            this.ctrlTemp = lista.ctrlTemp;
+            this.tirador = lista.tirador;
+            this.indicador = lista.indicador;
+            this.funcIndicador = lista.funcIndicador;
+            this.medidas = lista.medidas;
+            this.clasfEnergia = lista.clasfEnergia;
+            this.consumo = lista.consumo;
+            this.fecuencia = lista.fecuencia;
+            this.tension = lista.tension;
+            this.alimentacion = lista.alimentacion;
+        }
+}
 
-
+/* ELECTRÓNICA */
 export class ListPCOption {
     id: number;
     categoria: string;

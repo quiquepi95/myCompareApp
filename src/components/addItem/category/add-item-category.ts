@@ -25,7 +25,6 @@ export class AddPageCategory implements OnInit {
   }
 
   logForm() {
-    console.log(this.subcategory.subCatSeleccionada);
     if ( this.lista !== null ){
       this.listaService.borrarLista( this.lista );
     }
@@ -235,9 +234,71 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
+        case 'FRIGORÍFICOS':
+        if(this.subcategory.addFrigo.marca){
+          let listaFrigo = {};
+        if ( this.lista === null ){
+          listaFrigo = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addFrigo.marca,
+            "modelo": this.subcategory.addFrigo.modelo,
+            "precio": this.subcategory.addFrigo.precio,
+            "tipoFrigo": this.subcategory.addFrigo.tipoFrigo,
+            "capBrutaRefrig": this.subcategory.addFrigo.capBrutaRefrig,
+            "capBrutaCongel": this.subcategory.addFrigo.capBrutaCongel,
+            "capBrutaTotal": this.subcategory.addFrigo.capBrutaTotal,
+            "capUtilRefrig": this.subcategory.addFrigo.capUtilRefrig,
+            "capUtilCongel": this.subcategory.addFrigo.capUtilCongel,
+            "capUtilTotal": this.subcategory.addFrigo.capUtilTotal,
+            "tecnologia": this.subcategory.addFrigo.tecnologia,
+            "ctrlTemp": this.subcategory.addFrigo.ctrlTemp,
+            "tirador": this.subcategory.addFrigo.tirador,
+            "indicador": this.subcategory.addFrigo.indicador,
+            "funcIndicador": this.subcategory.addFrigo.funcIndicador,
+            "medidas": this.subcategory.addFrigo.medidas,
+            "clasfEnergia": this.subcategory.addFrigo.clasfEnergia,
+            "consumo": this.subcategory.addFrigo.consumo,
+            "fecuencia": this.subcategory.addFrigo.fecuencia,
+            "tension": this.subcategory.addFrigo.tension,
+            "alimentacion": this.subcategory.addFrigo.alimentacion,
+          };
+        } else {
+          listaFrigo = {
+            "id": this.lista.id,
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addFrigo.marca,
+            "modelo": this.subcategory.addFrigo.modelo,
+            "precio": this.subcategory.addFrigo.precio,
+            "tipoFrigo": this.subcategory.addFrigo.tipoFrigo,
+            "capBrutaRefrig": this.subcategory.addFrigo.capBrutaRefrig,
+            "capBrutaCongel": this.subcategory.addFrigo.capBrutaCongel,
+            "capBrutaTotal": this.subcategory.addFrigo.capBrutaTotal,
+            "capUtilRefrig": this.subcategory.addFrigo.capUtilRefrig,
+            "capUtilCongel": this.subcategory.addFrigo.capUtilCongel,
+            "capUtilTotal": this.subcategory.addFrigo.capUtilTotal,
+            "tecnologia": this.subcategory.addFrigo.tecnologia,
+            "ctrlTemp": this.subcategory.addFrigo.ctrlTemp,
+            "tirador": this.subcategory.addFrigo.tirador,
+            "indicador": this.subcategory.addFrigo.indicador,
+            "funcIndicador": this.subcategory.addFrigo.funcIndicador,
+            "medidas": this.subcategory.addFrigo.medidas,
+            "clasfEnergia": this.subcategory.addFrigo.clasfEnergia,
+            "consumo": this.subcategory.addFrigo.consumo,
+            "fecuencia": this.subcategory.addFrigo.fecuencia,
+            "tension": this.subcategory.addFrigo.tension,
+            "alimentacion": this.subcategory.addFrigo.alimentacion,
+          };
+        }
+        this.listaService.agregarItem( listaFrigo );
+        this.navCtrl.pop();
+        }
+        break;
         default:
           console.log('No hay datos disponibles');
-          break;
+        break;
     }
     
   }

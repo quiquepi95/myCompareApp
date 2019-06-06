@@ -7,12 +7,13 @@
     </ion-select>
 </ion-item>
 
+<!-- VEHICULOS -->
 <app-add-coche #childCoches [lista]="lista" *ngIf="subCatSeleccionada === 'COCHE'"></app-add-coche>
 <app-add-moto #childMotos [lista]="lista" *ngIf="subCatSeleccionada === 'MOTO'"></app-add-moto>
 
-
-
-
-
-<app-add-pc #childPC [lista]="lista" *ngIf="subCatSeleccionada === 'PC'"></app-add-pc>
+<!-- ELECTRODOMÉSTICOS -->
 <app-add-lavadora #childLavadora [lista]="lista" *ngIf="subCatSeleccionada === 'LAVADORA'"></app-add-lavadora>
+<app-add-frigo #childFrigo [lista]="lista" *ngIf="subCatSeleccionada === 'FRIGORÍFICOS'"></app-add-frigo>
+
+<!-- ELECTRÓNICA -->
+<app-add-pc #childPC [lista]="lista" *ngIf="subCatSeleccionada === 'PC'"></app-add-pc>

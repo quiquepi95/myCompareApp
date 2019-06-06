@@ -8,10 +8,14 @@ import { AddPageCategory } from "./addItem/category/add-item-category";
     templateUrl: 'listas.component.html'
 })
 export class ListasComponent {
+    hiddenVehiculos = false;
     hiddenCoche = false;
     hiddenMoto = false;
+    hiddenElectronica = false;
     hiddenPC = false;
+    hiddenElectrodomesticos = false;
     hiddenLavadora = false;
+    hiddenFrigo = false;
 
     constructor(public listaService: ListaService,
                 public navCtrl: NavController){}

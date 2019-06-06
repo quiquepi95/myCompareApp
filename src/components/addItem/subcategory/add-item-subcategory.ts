@@ -3,6 +3,7 @@ import { AddCochesComponent } from '../addCoches/addCoches';
 import { AddMotosComponent } from '../addMotos/addMotos';
 import { AddPcComponent } from '../addPC/addPC';
 import { AddLavadoraComponent } from '../addLavadora/addLavadora';
+import { AddFrigoComponent } from '../addFrigorifico/addFrigo';
 
 @Component({
   selector: 'page-add-subcategory',
@@ -14,8 +15,9 @@ export class AddPageSubcategory implements OnInit {
   
   @ViewChild('childCoches') addCoches:AddCochesComponent;
   @ViewChild('childMotos') addMotos:AddMotosComponent;
-  @ViewChild('childPC') addPC:AddPcComponent;
   @ViewChild('childLavadora') addLavadora:AddLavadoraComponent;
+  @ViewChild('childFrigo') addFrigo:AddFrigoComponent;
+  @ViewChild('childPC') addPC:AddPcComponent;
 
   @Input() category: string;
   @Input() lista: any;
