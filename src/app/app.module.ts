@@ -21,6 +21,8 @@ import { AddCochesComponent } from '../components/addItem/addCoches/addCoches';
 import { AddMotosComponent } from '../components/addItem/addMotos/addMotos';
 import { AddPcComponent } from '../components/addItem/addPC/addPC';
 import { AddLavadoraComponent } from '../components/addItem/addLavadora/addLavadora';
+import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo';
+import { AddLavavajillasComponent } from '../components/addItem/addLavavajillas/addLavavajillas';
 
 // Comparar
 import { CompareItemComponent } from '../components/compareItem/compareItem';
@@ -28,11 +30,12 @@ import { CompareItemCochesComponent } from '../components/compareItem/compareCoc
 import { CompareItemMotosComponent } from '../components/compareItem/compareMotos/compareMotos';
 import { CompareItemPcComponent } from '../components/compareItem/comparePC/comparePC';
 import { CompareItemLavadoraComponent } from '../components/compareItem/compareLavadora/compareLavadora';
+import { CompareItemFrigoComponent } from '../components/compareItem/compareFrigorifico/compareFrigo';
+import { CompareItemLavavajillasComponent } from '../components/compareItem/compareLavavajillas/compareLavavajillas';
 
 // Servicios
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
-import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo';
 
 
 @NgModule({
@@ -50,11 +53,14 @@ import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo
     AddPcComponent,
     AddLavadoraComponent,
     AddFrigoComponent,
+    AddLavavajillasComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
     CompareItemPcComponent,
-    CompareItemLavadoraComponent
+    CompareItemLavadoraComponent,
+    CompareItemFrigoComponent,
+    CompareItemLavavajillasComponent
   ],
   imports: [
     BrowserModule,
@@ -75,11 +81,14 @@ import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo
     AddPcComponent,
     AddLavadoraComponent,
     AddFrigoComponent,
+    AddLavavajillasComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
     CompareItemPcComponent,
-    CompareItemLavadoraComponent
+    CompareItemLavadoraComponent,
+    CompareItemFrigoComponent,
+    CompareItemLavavajillasComponent
   ],
   providers: [
     StatusBar,

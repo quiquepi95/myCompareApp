@@ -16,6 +16,7 @@ export class ListasComponent {
     hiddenElectrodomesticos = false;
     hiddenLavadora = false;
     hiddenFrigo = false;
+    hiddenLavavajillas = false;
 
     constructor(public listaService: ListaService,
                 public navCtrl: NavController){}

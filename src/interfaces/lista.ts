@@ -181,6 +181,60 @@ export class ListFrigoOption {
         }
 }
 
+export class ListLavavajillasOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    tipo?: string;
+    eficaciaLavado?: string;
+    eficaciaSecado?: string;
+    capacidad?: string;
+    numProgramas?: string;
+    tecnologia?: string;
+    indicador?: string;
+    indicaciones?: string;
+    numTemp?: string;
+    sistSeguridad?: string;
+    nivelRuido?: string;
+    cestas?: string;
+    bandejaCubiertos?: string;
+    medidas?: string;
+    clasfEnergia?: string;
+    consumoAgua?: string;
+    consumoEnergia?: string;
+    tension?: string;
+
+        constructor(lista: ListLavavajillasOption){
+            this.id = lista.id;
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.tipo = lista.tipo;
+            this.eficaciaLavado = lista.eficaciaLavado;
+            this.eficaciaSecado = lista.eficaciaSecado;
+            this.capacidad = lista.capacidad;
+            this.numProgramas = lista.numProgramas;
+            this.tecnologia = lista.tecnologia;
+            this.indicador = lista.indicador;
+            this.indicaciones = lista.indicaciones;
+            this.numTemp = lista.numTemp;
+            this.sistSeguridad = lista.sistSeguridad;
+            this.nivelRuido = lista.nivelRuido;
+            this.cestas = lista.cestas;
+            this.bandejaCubiertos = lista.bandejaCubiertos;
+            this.medidas = lista.medidas;
+            this.clasfEnergia = lista.clasfEnergia;
+            this.consumoAgua = lista.consumoAgua;
+            this.consumoEnergia = lista.consumoEnergia;
+            this.tension = lista.tension;
+        }
+}
+
 /* ELECTRÓNICA */
 export class ListPCOption {
     id: number;

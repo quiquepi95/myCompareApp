@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption } from "../interfaces/lista";
+import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
@@ -9,6 +9,7 @@ export class ListaService {
     listaPC: ListPCOption[] = [];
     listaLavadora: ListLavadoraOption[] = [];
     listaFrigo: ListFrigoOption[] = [];
+    listaLavavajillas: ListLavavajillasOption[] = [];
 
     constructor(){
         
@@ -39,6 +40,9 @@ export class ListaService {
             case 'FRIGORÍFICOS':
                 this.listaFrigo.push(lista);
                 break;
+            case 'LAVAVAJILLAS':
+                this.listaLavavajillas.push(lista);
+                break;
             default:
                 console.log('No se ha podido agregar el objeto.');
                 break;
@@ -63,6 +67,9 @@ export class ListaService {
         this.listaFrigo = this.listaFrigo.filter( listaData => {
             return listaData.id !== lista.id;
         });
+        this.listaLavavajillas = this.listaLavavajillas.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
 
         this.guardarStorage();
     }
@@ -73,6 +80,7 @@ export class ListaService {
         localStorage.setItem('dataPC', JSON.stringify( this.listaPC ));
         localStorage.setItem('dataLavadora', JSON.stringify( this.listaLavadora ));
         localStorage.setItem('dataFrigo', JSON.stringify( this.listaFrigo ));
+        localStorage.setItem('dataLavavajillas', JSON.stringify( this.listaLavavajillas ));
     }
 
     cargarStorage() {
@@ -105,6 +113,12 @@ export class ListaService {
             this.listaFrigo = JSON.parse( localStorage.getItem('dataFrigo') );
         } else{
             this.listaFrigo = [];
+        }
+
+        if( localStorage.getItem('dataLavavajillas') ){
+            this.listaLavavajillas = JSON.parse( localStorage.getItem('dataLavavajillas') );
+        } else{
+            this.listaLavavajillas = [];
         }
 
 

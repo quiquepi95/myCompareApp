@@ -27,6 +27,7 @@
             <ion-select [(ngModel)]="itemSeleccionadoIzq" (ionChange)="itemSelectedIzq(itemSeleccionadoIzq)" interface="popover" placeholder="Select One">
                 <ion-option *ngFor="let dato of listaService.listaLavadora" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaFrigo" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                <ion-option *ngFor="let dato of listaService.listaLavavajillas" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
             </ion-select>
         </ion-card>
     </ion-col>
@@ -38,6 +39,9 @@
                 </ng-container>
                 <ng-container *ngFor="let dato of listaService.listaFrigo">
                     <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'FRIGORÍFICOS'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                </ng-container>
+                <ng-container *ngFor="let dato of listaService.listaLavavajillas">
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'LAVAVAJILLAS'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 </ng-container>
             </ion-select>
         </ion-card>
@@ -67,12 +71,14 @@
     </ion-col>
 </ion-row>
 
-<!--  -->
+<!-- VEHÍCULOS -->
 <page-compare-item-coches *ngIf="listaIzq.length !== 0 && catSeleccionada === 'VEHICULOS' && listaIzq[0].subcategoria === 'COCHE'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-coches>
 <page-compare-item-motos *ngIf="listaIzq.length !== 0 && catSeleccionada === 'VEHICULOS' && listaIzq[0].subcategoria === 'MOTO'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-motos>
 
-
+<!-- ELECTRODOMÉSTICOS -->
 <page-compare-item-lavadora *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'LAVADORA'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-lavadora>
 <page-compare-item-frigo *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'FRIGORÍFICOS'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-frigo>
+<page-compare-item-lavavajillas *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'LAVAVAJILLAS'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-lavavajillas>
 
+<!-- ELECTRÓNICA -->
 <page-compare-item-pc *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRONICA' && listaIzq[0].subcategoria === 'PC'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-pc>

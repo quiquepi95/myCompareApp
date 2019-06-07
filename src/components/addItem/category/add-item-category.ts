@@ -296,6 +296,68 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
+        case 'LAVAVAJILLAS':
+        if(this.subcategory.addLavavajillas.marca){
+          let listaLavavajillas = {};
+        if ( this.lista === null ){
+          listaLavavajillas = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addLavavajillas.marca,
+            "modelo": this.subcategory.addLavavajillas.modelo,
+            "precio": this.subcategory.addLavavajillas.precio,
+            "tipo": this.subcategory.addLavavajillas.tipo,
+            "eficaciaLavado": this.subcategory.addLavavajillas.eficaciaLavado,
+            "eficaciaSecado": this.subcategory.addLavavajillas.eficaciaSecado,
+            "capacidad": this.subcategory.addLavavajillas.capacidad,
+            "numProgramas": this.subcategory.addLavavajillas.numProgramas,
+            "tecnologia": this.subcategory.addLavavajillas.tecnologia,
+            "indicador": this.subcategory.addLavavajillas.indicador,
+            "indicaciones": this.subcategory.addLavavajillas.indicaciones,
+            "numTemp": this.subcategory.addLavavajillas.numTemp,
+            "sistSeguridad": this.subcategory.addLavavajillas.sistSeguridad,
+            "nivelRuido": this.subcategory.addLavavajillas.nivelRuido,
+            "cestas": this.subcategory.addLavavajillas.cestas,
+            "bandejaCubiertos": this.subcategory.addLavavajillas.bandejaCubiertos,
+            "medidas": this.subcategory.addLavavajillas.medidas,
+            "clasfEnergia": this.subcategory.addLavavajillas.clasfEnergia,
+            "consumoAgua": this.subcategory.addLavavajillas.consumoAgua,
+            "consumoEnergia": this.subcategory.addLavavajillas.consumoEnergia,
+            "tension": this.subcategory.addLavavajillas.tension,
+          };
+        } else {
+          listaLavavajillas = {
+            "id": this.lista.id,
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addLavavajillas.marca,
+            "modelo": this.subcategory.addLavavajillas.modelo,
+            "precio": this.subcategory.addLavavajillas.precio,
+            "tipo": this.subcategory.addLavavajillas.tipo,
+            "eficaciaLavado": this.subcategory.addLavavajillas.eficaciaLavado,
+            "eficaciaSecado": this.subcategory.addLavavajillas.eficaciaSecado,
+            "capacidad": this.subcategory.addLavavajillas.capacidad,
+            "numProgramas": this.subcategory.addLavavajillas.numProgramas,
+            "tecnologia": this.subcategory.addLavavajillas.tecnologia,
+            "indicador": this.subcategory.addLavavajillas.indicador,
+            "indicaciones": this.subcategory.addLavavajillas.indicaciones,
+            "numTemp": this.subcategory.addLavavajillas.numTemp,
+            "sistSeguridad": this.subcategory.addLavavajillas.sistSeguridad,
+            "nivelRuido": this.subcategory.addLavavajillas.nivelRuido,
+            "cestas": this.subcategory.addLavavajillas.cestas,
+            "bandejaCubiertos": this.subcategory.addLavavajillas.bandejaCubiertos,
+            "medidas": this.subcategory.addLavavajillas.medidas,
+            "clasfEnergia": this.subcategory.addLavavajillas.clasfEnergia,
+            "consumoAgua": this.subcategory.addLavavajillas.consumoAgua,
+            "consumoEnergia": this.subcategory.addLavavajillas.consumoEnergia,
+            "tension": this.subcategory.addLavavajillas.tension,
+          };
+        }
+        this.listaService.agregarItem( listaLavavajillas );
+        this.navCtrl.pop();
+        }
+        break;
         default:
           console.log('No hay datos disponibles');
         break;

@@ -1,0 +1,76 @@
+<ion-row>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">Elementos</ion-label>
+            <ion-label>Marca: </ion-label>
+            <ion-label>Modelo: </ion-label>
+            <ion-label>Precio: </ion-label>
+            <ion-label>Tipo: </ion-label>
+            <ion-label>Cap Bruta Refrig: </ion-label>
+            <ion-label>Cap Bruta Congel: </ion-label>
+            <ion-label>Cap Bruta Total: </ion-label>
+            <ion-label>Cap Útil Refrig: </ion-label>
+            <ion-label>Cap Útil Congel: </ion-label>
+            <ion-label>Cap Útil Congel: </ion-label>
+            <ion-label>Tecnología: </ion-label>
+            <ion-label>Control temp: </ion-label>
+            <ion-label>Tirador: </ion-label>
+            <ion-label>Indicador: </ion-label>
+            <ion-label>Func indicador: </ion-label>
+            <ion-label>Medidas: </ion-label>
+            <ion-label>Clasf energia: </ion-label>
+            <ion-label>Consumo: </ion-label>
+            <ion-label>Frecuencia: </ion-label>
+            <ion-label>Tension: </ion-label>
+            <ion-label>Alimentación: </ion-label>
+    </ion-col>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].modelo? listaIzq[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].precio? listaIzq[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tipoFrigo? listaIzq[0].tipoFrigo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capBrutaRefrig? listaIzq[0].capBrutaRefrig : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capBrutaCongel? listaIzq[0].capBrutaCongel : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capBrutaTotal? listaIzq[0].capBrutaTotal : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capUtilRefrig? listaIzq[0].capUtilRefrig : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capUtilCongel? listaIzq[0].capUtilCongel : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capUtilTotal? listaIzq[0].capUtilTotal : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tecnologia? listaIzq[0].tecnologia : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].ctrlTemp? listaIzq[0].ctrlTemp : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tirador? listaIzq[0].tirador : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].indicador? listaIzq[0].indicador : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].funcIndicador? listaIzq[0].funcIndicador : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].medidas? listaIzq[0].medidas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].clasfEnergia? listaIzq[0].clasfEnergia : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].consumo? listaIzq[0].consumo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].fecuencia? listaIzq[0].fecuencia : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tension? listaIzq[0].tension : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].alimentacion? listaIzq[0].alimentacion : 'X' }}</ion-label>
+    </ion-col>
+
+
+    <ion-col col-4 *ngIf="listaDrcha.length !== 0">
+            <ion-label class="title">{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].modelo? listaDrcha[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].precio? listaDrcha[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tipoFrigo? listaDrcha[0].tipoFrigo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capBrutaRefrig? listaDrcha[0].capBrutaRefrig : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capBrutaCongel? listaDrcha[0].capBrutaCongel : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capBrutaTotal? listaDrcha[0].capBrutaTotal : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capUtilRefrig? listaDrcha[0].capUtilRefrig : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capUtilCongel? listaDrcha[0].capUtilCongel : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capUtilTotal? listaDrcha[0].capUtilTotal : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tecnologia? listaDrcha[0].tecnologia : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].ctrlTemp? listaDrcha[0].ctrlTemp : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tirador? listaDrcha[0].tirador : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].indicador? listaDrcha[0].indicador : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].funcIndicador? listaDrcha[0].funcIndicador : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].medidas? listaDrcha[0].medidas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].clasfEnergia? listaDrcha[0].clasfEnergia : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].consumo? listaDrcha[0].consumo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].fecuencia? listaDrcha[0].fecuencia : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tension? listaDrcha[0].tension : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].alimentacion? listaDrcha[0].alimentacion : 'X' }}</ion-label>
+    </ion-col>
+</ion-row>
