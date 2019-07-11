@@ -235,6 +235,56 @@ export class ListLavavajillasOption {
         }
 }
 
+export class ListSecadoraOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    tipoSecadora?: string;
+    peso?: string;
+    medidas?: string;
+    capacidad?: string;
+    potencia?: string;
+    clasfEnergia?: string;
+    ruido?: string;
+    antiarrugas?: string;
+    alergias?: string;
+    consumo?: string;
+    numProgramas?: string;
+    lana?: string;
+    camisas?: string;
+    tempFrio?: string;
+    tempCaliente?: string;
+    otros?: string;
+
+        constructor(lista: ListSecadoraOption){
+            this.id = lista.id;
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.tipoSecadora = lista.tipoSecadora;
+            this.peso = lista.peso;
+            this.medidas = lista.medidas;
+            this.capacidad = lista.capacidad;
+            this.potencia = lista.potencia;
+            this.clasfEnergia = lista.clasfEnergia;
+            this.ruido = lista.ruido;
+            this.antiarrugas = lista.antiarrugas;
+            this.alergias = lista.alergias;
+            this.consumo = lista.consumo;
+            this.numProgramas = lista.numProgramas;
+            this.lana = lista.lana;
+            this.camisas = lista.camisas;
+            this.tempFrio = lista.tempFrio;
+            this.tempCaliente = lista.tempCaliente;
+            this.otros = lista.otros;
+        }
+}
+
 /* ELECTRÓNICA */
 export class ListPCOption {
     id: number;

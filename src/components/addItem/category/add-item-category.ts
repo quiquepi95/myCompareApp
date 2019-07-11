@@ -358,6 +358,64 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
+        case 'SECADORAS':
+        if(this.subcategory.addSecadora.marca){
+          let listaSecadora = {};
+        if ( this.lista === null ){
+          listaSecadora = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addSecadora.marca,
+            "modelo": this.subcategory.addSecadora.modelo,
+            "precio": this.subcategory.addSecadora.precio,
+            "tipoSecadora": this.subcategory.addSecadora.tipoSecadora,
+            "peso": this.subcategory.addSecadora.peso,
+            "medidas": this.subcategory.addSecadora.medidas,
+            "capacidad": this.subcategory.addSecadora.capacidad,
+            "potencia": this.subcategory.addSecadora.potencia,
+            "clasfEnergia": this.subcategory.addSecadora.clasfEnergia,
+            "ruido": this.subcategory.addSecadora.ruido,
+            "antiarrugas": this.subcategory.addSecadora.antiarrugas,
+            "alergias": this.subcategory.addSecadora.alergias,
+            "consumo": this.subcategory.addSecadora.consumo,
+            "numProgramas": this.subcategory.addSecadora.numProgramas,
+            "lana": this.subcategory.addSecadora.lana,
+            "camisas": this.subcategory.addSecadora.camisas,
+            "tempFrio": this.subcategory.addSecadora.tempFrio,
+            "tempCaliente": this.subcategory.addSecadora.tempCaliente,
+            "otros": this.subcategory.addSecadora.otros,
+          };
+        } else {
+          listaSecadora = {
+            "id": this.lista.id,
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addSecadora.tipoSecadora,
+            "modelo": this.subcategory.addSecadora.peso,
+            "precio": this.subcategory.addSecadora.medidas,
+            "tipoSecadora": this.subcategory.addSecadora.tipoSecadora,
+            "peso": this.subcategory.addSecadora.peso,
+            "medidas": this.subcategory.addSecadora.medidas,
+            "capacidad": this.subcategory.addSecadora.capacidad,
+            "potencia": this.subcategory.addSecadora.potencia,
+            "clasfEnergia": this.subcategory.addSecadora.clasfEnergia,
+            "ruido": this.subcategory.addSecadora.ruido,
+            "antiarrugas": this.subcategory.addSecadora.antiarrugas,
+            "alergias": this.subcategory.addSecadora.alergias,
+            "consumo": this.subcategory.addSecadora.consumo,
+            "numProgramas": this.subcategory.addSecadora.numProgramas,
+            "lana": this.subcategory.addSecadora.lana,
+            "camisas": this.subcategory.addSecadora.camisas,
+            "tempFrio": this.subcategory.addSecadora.tempFrio,
+            "tempCaliente": this.subcategory.addSecadora.tempCaliente,
+            "otros": this.subcategory.addSecadora.otros,
+          };
+        }
+        this.listaService.agregarItem( listaSecadora );
+        this.navCtrl.pop();
+        }
+        break;
         default:
           console.log('No hay datos disponibles');
         break;

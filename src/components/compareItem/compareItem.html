@@ -28,6 +28,7 @@
                 <ion-option *ngFor="let dato of listaService.listaLavadora" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaFrigo" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaLavavajillas" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                <ion-option *ngFor="let dato of listaService.listaSecadora" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
             </ion-select>
         </ion-card>
     </ion-col>
@@ -42,6 +43,9 @@
                 </ng-container>
                 <ng-container *ngFor="let dato of listaService.listaLavavajillas">
                     <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'LAVAVAJILLAS'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                </ng-container>
+                <ng-container *ngFor="let dato of listaService.listaSecadora">
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'SECADORAS'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 </ng-container>
             </ion-select>
         </ion-card>

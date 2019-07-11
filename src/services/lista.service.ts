@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption } from "../interfaces/lista";
+import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption, ListSecadoraOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
@@ -10,6 +10,7 @@ export class ListaService {
     listaLavadora: ListLavadoraOption[] = [];
     listaFrigo: ListFrigoOption[] = [];
     listaLavavajillas: ListLavavajillasOption[] = [];
+    listaSecadora: ListSecadoraOption[] = [];
 
     constructor(){
         
@@ -43,6 +44,9 @@ export class ListaService {
             case 'LAVAVAJILLAS':
                 this.listaLavavajillas.push(lista);
                 break;
+            case 'SECADORAS':
+                this.listaSecadora.push(lista);
+                break;
             default:
                 console.log('No se ha podido agregar el objeto.');
                 break;
@@ -70,6 +74,9 @@ export class ListaService {
         this.listaLavavajillas = this.listaLavavajillas.filter( listaData => {
             return listaData.id !== lista.id;
         });
+        this.listaSecadora = this.listaSecadora.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
 
         this.guardarStorage();
     }
@@ -81,6 +88,7 @@ export class ListaService {
         localStorage.setItem('dataLavadora', JSON.stringify( this.listaLavadora ));
         localStorage.setItem('dataFrigo', JSON.stringify( this.listaFrigo ));
         localStorage.setItem('dataLavavajillas', JSON.stringify( this.listaLavavajillas ));
+        localStorage.setItem('dataSecadora', JSON.stringify( this.listaSecadora ));
     }
 
     cargarStorage() {
@@ -119,6 +127,12 @@ export class ListaService {
             this.listaLavavajillas = JSON.parse( localStorage.getItem('dataLavavajillas') );
         } else{
             this.listaLavavajillas = [];
+        }
+
+        if( localStorage.getItem('dataSecadora') ){
+            this.listaSecadora = JSON.parse( localStorage.getItem('dataSecadora') );
+        } else{
+            this.listaSecadora = [];
         }
 
 

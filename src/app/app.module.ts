@@ -23,6 +23,7 @@ import { AddPcComponent } from '../components/addItem/addPC/addPC';
 import { AddLavadoraComponent } from '../components/addItem/addLavadora/addLavadora';
 import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo';
 import { AddLavavajillasComponent } from '../components/addItem/addLavavajillas/addLavavajillas';
+import { AddSecadoraComponent } from '../components/addItem/addSecadora/addSecadora';
 
 // Comparar
 import { CompareItemComponent } from '../components/compareItem/compareItem';
@@ -54,6 +55,7 @@ import { ListasComponent } from '../components/listas.component';
     AddLavadoraComponent,
     AddFrigoComponent,
     AddLavavajillasComponent,
+    AddSecadoraComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
@@ -82,6 +84,7 @@ import { ListasComponent } from '../components/listas.component';
     AddLavadoraComponent,
     AddFrigoComponent,
     AddLavavajillasComponent,
+    AddSecadoraComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
