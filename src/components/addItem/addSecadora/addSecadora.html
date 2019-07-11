@@ -1,26 +1,26 @@
 <ion-item>
     <ion-label>Marca</ion-label>
-    <ion-input floating [(ngModel)]="marca" required text-right clearInput type="string" placeholder="Lavavajillas Bosch"></ion-input>
+    <ion-input floating [(ngModel)]="marca" required text-right clearInput type="string" placeholder="Secadora Bosch"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Modelo</ion-label>
-    <ion-input floating [(ngModel)]="modelo" text-right clearInput type="string" placeholder="SMS46KI01E"></ion-input>
+    <ion-input floating [(ngModel)]="modelo" text-right clearInput type="string" placeholder="WTA73200ES"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Precio</ion-label>
-    <ion-input floating [(ngModel)]="precio" text-right clearInput type="string" placeholder="549€"></ion-input>
+    <ion-input floating [(ngModel)]="precio" text-right clearInput type="string" placeholder="359€"></ion-input>
 </ion-item>
 <ion-item>
-    <ion-label>Tipo lavavajillas</ion-label>
-    <ion-input Clas [(ngModel)]="tipo" text-right clearInput type="string" placeholder="Lavavajillas 60 cm"></ion-input>
+    <ion-label>Tipo secadora</ion-label>
+    <ion-input Clas [(ngModel)]="tipoSecadora" text-right clearInput type="string" placeholder="Lavavajillas 60 cm"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Eficacia lavado</ion-label>
-    <ion-input floating [(ngModel)]="eficaciaLavado" text-right clearInput type="string" placeholder="A"></ion-input>
+    <ion-input floating [(ngModel)]="peso" text-right clearInput type="string" placeholder="A"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Eficacia secado</ion-label>
-    <ion-input floating [(ngModel)]="eficaciaSecado" text-right clearInput type="string" placeholder="A"></ion-input>
+    <ion-input floating [(ngModel)]="medidas" text-right clearInput type="string" placeholder="A"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Capacidad</ion-label>
@@ -28,57 +28,49 @@
 </ion-item>
 <ion-item>
     <ion-label>Núm programas</ion-label>
-    <ion-input floating [(ngModel)]="numProgramas" text-right clearInput type="string" placeholder="6"></ion-input>
+    <ion-input floating [(ngModel)]="potencia" text-right clearInput type="string" placeholder="6"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Tecnología</ion-label>
-    <ion-input floating [(ngModel)]="tecnologia" text-right clearInput type="string" placeholder="Motor eco, varioSpeed, Detección detergentes"></ion-input>
+    <ion-input floating [(ngModel)]="clasfEnergia" text-right clearInput type="string" placeholder="Motor eco, varioSpeed, Detección detergentes"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Indicador</ion-label>
-    <ion-input floating [(ngModel)]="indicador" text-right clearInput type="string" placeholder="Gran display LED"></ion-input>
+    <ion-input floating [(ngModel)]="ruido" text-right clearInput type="string" placeholder="Gran display LED"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Indicaciones</ion-label>
-    <ion-input floating [(ngModel)]="indicaciones" text-right clearInput type="string" placeholder="Temp restanto, Repo sal y abrillantador"></ion-input>
+    <ion-input floating [(ngModel)]="antiarrugas" text-right clearInput type="string" placeholder="Temp restanto, Repo sal y abrillantador"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Núm temperaturas</ion-label>
-    <ion-input floating [(ngModel)]="numTemp" text-right clearInput type="string" placeholder="5"></ion-input>
+    <ion-input floating [(ngModel)]="alergias" text-right clearInput type="string" placeholder="5"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Sistema seguridad</ion-label>
-    <ion-input floating [(ngModel)]="sistSeguridad" text-right clearInput type="string" placeholder="Aquastop"></ion-input>
+    <ion-input floating [(ngModel)]="consumo" text-right clearInput type="string" placeholder="Aquastop"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Nivel ruido</ion-label>
-    <ion-input floating [(ngModel)]="nivelRuido" text-right clearInput type="string" placeholder="46 dB"></ion-input>
+    <ion-input floating [(ngModel)]="numProgramas" text-right clearInput type="string" placeholder="46 dB"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Cestas</ion-label>
-    <ion-input floating [(ngModel)]="cestas" text-right clearInput type="string" placeholder="Cesta superior regulable 3 alturas"></ion-input>
+    <ion-input floating [(ngModel)]="lana" text-right clearInput type="string" placeholder="Cesta superior regulable 3 alturas"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Bandeja cubiertos</ion-label>
-    <ion-input floating [(ngModel)]="bandejaCubiertos" text-right clearInput type="string" placeholder="Sí"></ion-input>
+    <ion-input floating [(ngModel)]="camisas" text-right clearInput type="string" placeholder="Sí"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Medidas</ion-label>
-    <ion-input floating [(ngModel)]="medidas" text-right clearInput type="string" placeholder="60 x 84,5 x 60 cm"></ion-input>
+    <ion-input floating [(ngModel)]="tempFrio" text-right clearInput type="string" placeholder="60 x 84,5 x 60 cm"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Clasif. energía</ion-label>
-    <ion-input floating [(ngModel)]="clasfEnergia" text-right clearInput type="string" placeholder="A++"></ion-input>
+    <ion-input floating [(ngModel)]="tempCaliente" text-right clearInput type="string" placeholder="A++"></ion-input>
 </ion-item>
 <ion-item>
     <ion-label>Consumo agua</ion-label>
-    <ion-input floating [(ngModel)]="consumoAgua" text-right clearInput type="string" placeholder="2660 litros/año"></ion-input>
-</ion-item>
-<ion-item>
-    <ion-label>Consumo energía</ion-label>
-    <ion-input floating [(ngModel)]="consumoEnergia" text-right clearInput type="string" placeholder="262 kWh/año"></ion-input>
-</ion-item>
-<ion-item>
-    <ion-label>Tensión</ion-label>
-    <ion-input floating [(ngModel)]="tension" text-right clearInput type="string" placeholder="220 - 240 V"></ion-input>
+    <ion-input floating [(ngModel)]="otros" text-right clearInput type="string" placeholder="2660 litros/año"></ion-input>
 </ion-item>
