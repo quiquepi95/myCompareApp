@@ -31,8 +31,6 @@ export class AddSecadoraComponent implements OnInit {
     constructor(){}
 
     ngOnInit(){
-        // https://www.carrefour.es/secadora-de-evacuacion-7-kg-bosch-wta73200es/2063385078/p
-        // https://www.worten.es/productos/electrodomesticos/secadoras/secadora-bomba-calor-bosch-wtg87239es-8-kg-bomba-de-calor-blanco-6571594
         if ( this.lista !== null ){
             this.marca = this.lista.marca;
             this.modelo = this.lista.modelo;

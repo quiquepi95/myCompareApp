@@ -37,6 +37,7 @@ import { CompareItemLavavajillasComponent } from '../components/compareItem/comp
 // Servicios
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
+import { CompareItemSecadoraComponent } from '../components/compareItem/compareSecadora/compareSecadora';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { ListasComponent } from '../components/listas.component';
     CompareItemPcComponent,
     CompareItemLavadoraComponent,
     CompareItemFrigoComponent,
-    CompareItemLavavajillasComponent
+    CompareItemLavavajillasComponent,
+    CompareItemSecadoraComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +93,8 @@ import { ListasComponent } from '../components/listas.component';
     CompareItemPcComponent,
     CompareItemLavadoraComponent,
     CompareItemFrigoComponent,
-    CompareItemLavavajillasComponent
+    CompareItemLavavajillasComponent,
+    CompareItemSecadoraComponent
   ],
   providers: [
     StatusBar,

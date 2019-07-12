@@ -1,0 +1,70 @@
+<ion-row>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">Elementos</ion-label>
+            <ion-label>Marca: </ion-label>
+            <ion-label>Modelo: </ion-label>
+            <ion-label>Precio: </ion-label>
+            <ion-label>Tipo secadora: </ion-label>
+            <ion-label>Peso: </ion-label>
+            <ion-label>Medidas: </ion-label>
+            <ion-label>Capacidad: </ion-label>
+            <ion-label>Potencia: </ion-label>
+            <ion-label>ClasfEnergia: </ion-label>
+            <ion-label>Ruido: </ion-label>
+            <ion-label>Antiarrugas: </ion-label>
+            <ion-label>Alergias: </ion-label>
+            <ion-label>Consumo: </ion-label>
+            <ion-label>Num programas: </ion-label>
+            <ion-label>Lana: </ion-label>
+            <ion-label>Camisas: </ion-label>
+            <ion-label>Tempor frio: </ion-label>
+            <ion-label>Tempor caliente: </ion-label>
+            <ion-label>Otros: </ion-label>
+    </ion-col>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].modelo? listaIzq[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].precio? listaIzq[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tipoSecadora? listaIzq[0].tipoSecadora : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].peso? listaIzq[0].peso : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].medidas? listaIzq[0].medidas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capacidad? listaIzq[0].capacidad : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].potencia? listaIzq[0].potencia : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].clasfEnergia? listaIzq[0].clasfEnergia : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].ruido? listaIzq[0].ruido : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].antiarrugas? listaIzq[0].antiarrugas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].alergias? listaIzq[0].alergias : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].consumo? listaIzq[0].consumo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].numProgramas? listaIzq[0].numProgramas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].lana? listaIzq[0].lana : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].camisas? listaIzq[0].camisas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tempFrio? listaIzq[0].tempFrio : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tempCaliente? listaIzq[0].tempCaliente : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].otros? listaIzq[0].otros : 'X' }}</ion-label>
+    </ion-col>
+
+
+    <ion-col col-4 *ngIf="listaDrcha.length !== 0">
+            <ion-label class="title">{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].modelo? listaDrcha[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].precio? listaDrcha[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tipoSecadora? listaDrcha[0].tipoSecadora : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].peso? listaDrcha[0].peso : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].medidas? listaDrcha[0].medidas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capacidad? listaDrcha[0].capacidad : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].potencia? listaDrcha[0].potencia : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].clasfEnergia? listaDrcha[0].clasfEnergia : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].ruido? listaDrcha[0].ruido : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].antiarrugas? listaDrcha[0].antiarrugas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].alergias? listaDrcha[0].alergias : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].consumo? listaDrcha[0].consumo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].numProgramas? listaDrcha[0].numProgramas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].lana? listaDrcha[0].lana : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].camisas? listaDrcha[0].camisas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tempFrio? listaDrcha[0].tempFrio : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tempCaliente? listaDrcha[0].tempCaliente : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].otros? listaDrcha[0].otros : 'X' }}</ion-label>
+    </ion-col>
+</ion-row>
