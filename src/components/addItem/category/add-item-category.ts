@@ -416,6 +416,58 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
+        case 'HORNOS':
+        if(this.subcategory.addHorno.marca){
+          let listaHorno = {};
+        if ( this.lista === null ){
+          listaHorno = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addHorno.marca,
+            "modelo": this.subcategory.addHorno.modelo,
+            "precio": this.subcategory.addHorno.precio,
+            "tipoHorno": this.subcategory.addHorno.tipoHorno,
+            "capacidad": this.subcategory.addHorno.capacidad,
+            "medidas": this.subcategory.addHorno.medidas,
+            "bandejas": this.subcategory.addHorno.bandejas,
+            "numBandejas": this.subcategory.addHorno.numBandejas,
+            "autolimpieza": this.subcategory.addHorno.autolimpieza,
+            "clasfEnergia": this.subcategory.addHorno.clasfEnergia,
+            "functHorno": this.subcategory.addHorno.functHorno,
+            "limpieza": this.subcategory.addHorno.limpieza,
+            "interfaz": this.subcategory.addHorno.interfaz,
+            "grill": this.subcategory.addHorno.grill,
+            "ventilador": this.subcategory.addHorno.ventilador,
+            "otros": this.subcategory.addHorno.otros,
+          };
+        } else {
+          listaHorno = {
+            "id": this.lista.id,
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addHorno.marca,
+            "modelo": this.subcategory.addHorno.modelo,
+            "precio": this.subcategory.addHorno.precio,
+            "tipoHorno": this.subcategory.addHorno.tipoHorno,
+            "capacidad": this.subcategory.addHorno.capacidad,
+            "medidas": this.subcategory.addHorno.medidas,
+            "bandejas": this.subcategory.addHorno.bandejas,
+            "numBandejas": this.subcategory.addHorno.numBandejas,
+            "autolimpieza": this.subcategory.addHorno.autolimpieza,
+            "clasfEnergia": this.subcategory.addHorno.clasfEnergia,
+            "functHorno": this.subcategory.addHorno.functHorno,
+            "limpieza": this.subcategory.addHorno.limpieza,
+            "interfaz": this.subcategory.addHorno.interfaz,
+            "grill": this.subcategory.addHorno.grill,
+            "ventilador": this.subcategory.addHorno.ventilador,
+            "otros": this.subcategory.addHorno.otros,
+          };
+        }
+        this.listaService.agregarItem( listaHorno );
+        this.navCtrl.pop();
+        }
+        break;
         default:
           console.log('No hay datos disponibles');
         break;

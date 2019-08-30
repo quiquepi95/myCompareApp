@@ -24,6 +24,7 @@ import { AddLavadoraComponent } from '../components/addItem/addLavadora/addLavad
 import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo';
 import { AddLavavajillasComponent } from '../components/addItem/addLavavajillas/addLavavajillas';
 import { AddSecadoraComponent } from '../components/addItem/addSecadora/addSecadora';
+import { AddHornoComponent } from '../components/addItem/addHorno/addHorno';
 
 // Comparar
 import { CompareItemComponent } from '../components/compareItem/compareItem';
@@ -33,11 +34,12 @@ import { CompareItemPcComponent } from '../components/compareItem/comparePC/comp
 import { CompareItemLavadoraComponent } from '../components/compareItem/compareLavadora/compareLavadora';
 import { CompareItemFrigoComponent } from '../components/compareItem/compareFrigorifico/compareFrigo';
 import { CompareItemLavavajillasComponent } from '../components/compareItem/compareLavavajillas/compareLavavajillas';
+import { CompareItemSecadoraComponent } from '../components/compareItem/compareSecadora/compareSecadora';
+import { CompareItemHornoComponent } from '../components/compareItem/compareHorno/compareHorno';
 
 // Servicios
 import { ListaService } from '../services/lista.service';
 import { ListasComponent } from '../components/listas.component';
-import { CompareItemSecadoraComponent } from '../components/compareItem/compareSecadora/compareSecadora';
 
 
 @NgModule({
@@ -57,6 +59,7 @@ import { CompareItemSecadoraComponent } from '../components/compareItem/compareS
     AddFrigoComponent,
     AddLavavajillasComponent,
     AddSecadoraComponent,
+    AddHornoComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
@@ -64,7 +67,8 @@ import { CompareItemSecadoraComponent } from '../components/compareItem/compareS
     CompareItemLavadoraComponent,
     CompareItemFrigoComponent,
     CompareItemLavavajillasComponent,
-    CompareItemSecadoraComponent
+    CompareItemSecadoraComponent,
+    CompareItemHornoComponent
   ],
   imports: [
     BrowserModule,
@@ -87,6 +91,7 @@ import { CompareItemSecadoraComponent } from '../components/compareItem/compareS
     AddFrigoComponent,
     AddLavavajillasComponent,
     AddSecadoraComponent,
+    AddHornoComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
@@ -94,7 +99,8 @@ import { CompareItemSecadoraComponent } from '../components/compareItem/compareS
     CompareItemLavadoraComponent,
     CompareItemFrigoComponent,
     CompareItemLavavajillasComponent,
-    CompareItemSecadoraComponent
+    CompareItemSecadoraComponent,
+    CompareItemHornoComponent
   ],
   providers: [
     StatusBar,

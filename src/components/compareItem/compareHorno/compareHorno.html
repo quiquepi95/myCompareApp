@@ -1,0 +1,61 @@
+<ion-row>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">Elementos</ion-label>
+            <ion-label>Marca: </ion-label>
+            <ion-label>Modelo: </ion-label>
+            <ion-label>Precio: </ion-label>
+            <ion-label>Tipo horno: </ion-label>
+            <ion-label>Capacidad: </ion-label>
+            <ion-label>Medidas: </ion-label>
+            <ion-label>Bandejas: </ion-label>
+            <ion-label>Num bandejas: </ion-label>
+            <ion-label>Autolimpieza: </ion-label>
+            <ion-label>Limpieza: </ion-label>
+            <ion-label>Clasif. energía: </ion-label>
+            <ion-label>Func. horno: </ion-label>
+            <ion-label>Interfaz: </ion-label>
+            <ion-label>Grill programas: </ion-label>
+            <ion-label>Ventilador: </ion-label>
+            <ion-label>Otros: </ion-label>
+    </ion-col>
+    <ion-col col-4 *ngIf="listaIzq.length !== 0">
+            <ion-label class="title">{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].marca? listaIzq[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].modelo? listaIzq[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].precio? listaIzq[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].tipoHorno? listaIzq[0].tipoHorno : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].capacidad? listaIzq[0].capacidad : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].medidas? listaIzq[0].medidas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].bandejas? listaIzq[0].bandejas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].numBandejas? listaIzq[0].numBandejas : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].autolimpieza? listaIzq[0].autolimpieza : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].clasfEnergia? listaIzq[0].clasfEnergia : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].functHorno? listaIzq[0].functHorno : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].limpieza? listaIzq[0].limpieza : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].interfaz? listaIzq[0].interfaz : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].grill? listaIzq[0].grill : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].ventilador? listaIzq[0].ventilador : 'X' }}</ion-label>
+            <ion-label>{{ listaIzq[0].otros? listaIzq[0].otros : 'X' }}</ion-label>
+    </ion-col>
+
+
+    <ion-col col-4 *ngIf="listaDrcha.length !== 0">
+            <ion-label class="title">{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].marca? listaDrcha[0].marca : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].modelo? listaDrcha[0].modelo : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].precio? listaDrcha[0].precio : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].tipoHorno? listaDrcha[0].tipoHorno : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].capacidad? listaDrcha[0].capacidad : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].medidas? listaDrcha[0].medidas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].bandejas? listaDrcha[0].bandejas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].numBandejas? listaDrcha[0].numBandejas : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].autolimpieza? listaDrcha[0].autolimpieza : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].clasfEnergia? listaDrcha[0].clasfEnergia : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].functHorno? listaDrcha[0].functHorno : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].limpieza? listaDrcha[0].limpieza : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].interfaz? listaDrcha[0].interfaz : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].grill? listaDrcha[0].grill : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].ventilador? listaDrcha[0].ventilador : 'X' }}</ion-label>
+            <ion-label>{{ listaDrcha[0].otros? listaDrcha[0].otros : 'X' }}</ion-label>
+    </ion-col>
+</ion-row>

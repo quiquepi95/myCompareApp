@@ -6,6 +6,7 @@ import { AddLavadoraComponent } from '../addLavadora/addLavadora';
 import { AddFrigoComponent } from '../addFrigorifico/addFrigo';
 import { AddLavavajillasComponent } from '../addLavavajillas/addLavavajillas';
 import { AddSecadoraComponent } from '../addSecadora/addSecadora';
+import { AddHornoComponent } from '../addHorno/addHorno';
 
 @Component({
   selector: 'page-add-subcategory',
@@ -21,6 +22,7 @@ export class AddPageSubcategory implements OnInit {
   @ViewChild('childFrigo') addFrigo:AddFrigoComponent;
   @ViewChild('childLavavajillas') addLavavajillas:AddLavavajillasComponent;
   @ViewChild('childSecadora') addSecadora:AddSecadoraComponent;
+  @ViewChild('childHorno') addHorno:AddHornoComponent;
   @ViewChild('childPC') addPC:AddPcComponent;
 
   @Input() category: string;

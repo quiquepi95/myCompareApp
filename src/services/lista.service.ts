@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption, ListSecadoraOption } from "../interfaces/lista";
+import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption, ListSecadoraOption, ListHornoOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
@@ -11,6 +11,7 @@ export class ListaService {
     listaFrigo: ListFrigoOption[] = [];
     listaLavavajillas: ListLavavajillasOption[] = [];
     listaSecadora: ListSecadoraOption[] = [];
+    listaHorno: ListHornoOption[] = [];
 
     constructor(){
         
@@ -47,6 +48,9 @@ export class ListaService {
             case 'SECADORAS':
                 this.listaSecadora.push(lista);
                 break;
+            case 'HORNOS':
+                this.listaHorno.push(lista);
+                break;
             default:
                 console.log('No se ha podido agregar el objeto.');
                 break;
@@ -77,6 +81,9 @@ export class ListaService {
         this.listaSecadora = this.listaSecadora.filter( listaData => {
             return listaData.id !== lista.id;
         });
+        this.listaHorno = this.listaHorno.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
 
         this.guardarStorage();
     }
@@ -89,6 +96,7 @@ export class ListaService {
         localStorage.setItem('dataFrigo', JSON.stringify( this.listaFrigo ));
         localStorage.setItem('dataLavavajillas', JSON.stringify( this.listaLavavajillas ));
         localStorage.setItem('dataSecadora', JSON.stringify( this.listaSecadora ));
+        localStorage.setItem('dataHorno', JSON.stringify( this.listaHorno ));
     }
 
     cargarStorage() {
@@ -133,6 +141,12 @@ export class ListaService {
             this.listaSecadora = JSON.parse( localStorage.getItem('dataSecadora') );
         } else{
             this.listaSecadora = [];
+        }
+
+        if( localStorage.getItem('dataHorno') ){
+            this.listaHorno = JSON.parse( localStorage.getItem('dataHorno') );
+        } else{
+            this.listaHorno = [];
         }
 
 

@@ -285,6 +285,50 @@ export class ListSecadoraOption {
         }
 }
 
+export class ListHornoOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    tipoHorno?: string;
+    capacidad?: string;
+    medidas?: string;
+    bandejas?: string;
+    numBandejas?: string;
+    autolimpieza?: string;
+    clasfEnergia?: string;
+    functHorno?: string;
+    limpieza?: string;
+    interfaz?: string;
+    grill?: string;
+    ventilador?: string;
+    otros?: string;
+
+        constructor(lista: ListHornoOption){
+            this.id = lista.id;
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.tipoHorno = lista.tipoHorno;
+            this.capacidad = lista.capacidad;
+            this.medidas = lista.medidas;
+            this.bandejas = lista.bandejas;
+            this.numBandejas = lista.numBandejas;
+            this.autolimpieza = lista.autolimpieza;
+            this.clasfEnergia = lista.clasfEnergia;
+            this.functHorno = lista.functHorno;
+            this.limpieza = lista.limpieza;
+            this.interfaz = lista.interfaz;
+            this.grill = lista.grill;
+            this.ventilador = lista.ventilador;
+            this.otros = lista.otros;
+        }
+}
+
 /* ELECTRÓNICA */
 export class ListPCOption {
     id: number;
