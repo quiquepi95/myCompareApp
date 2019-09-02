@@ -30,6 +30,7 @@
                 <ion-option *ngFor="let dato of listaService.listaLavavajillas" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaSecadora" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 <ion-option *ngFor="let dato of listaService.listaHorno" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                <ion-option *ngFor="let dato of listaService.listaMicro" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
             </ion-select>
         </ion-card>
     </ion-col>
@@ -50,6 +51,9 @@
                 </ng-container>
                 <ng-container *ngFor="let dato of listaService.listaHorno">
                     <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'HORNOS'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
+                </ng-container>
+                <ng-container *ngFor="let dato of listaService.listaMicro">
+                    <ion-option *ngIf="listaIzq.length !== 0 && listaIzq[0].subcategoria === 'MICROHONDAS'" value="{{ dato | json }}">{{ dato.marca }} {{ dato.modelo }}</ion-option>
                 </ng-container>
             </ion-select>
         </ion-card>
@@ -89,6 +93,7 @@
 <page-compare-item-lavavajillas *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'LAVAVAJILLAS'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-lavavajillas>
 <page-compare-item-secadora *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'SECADORAS'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-secadora>
 <page-compare-item-horno *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'HORNOS'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-horno>
+<page-compare-item-micro *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRODOMESTICOS' && listaIzq[0].subcategoria === 'MICROHONDAS'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-micro>
 
 <!-- ELECTRÓNICA -->
 <page-compare-item-pc *ngIf="listaIzq.length !== 0 && catSeleccionada === 'ELECTRONICA' && listaIzq[0].subcategoria === 'PC'" [listaIzq]="listaIzq" [listaDrcha]="listaDrcha"></page-compare-item-pc>

@@ -328,6 +328,53 @@ export class ListHornoOption {
             this.otros = lista.otros;
         }
 }
+export class ListMicroOption {
+    id: number;
+    categoria: string;
+    subcategoria: string;
+    marca: string;
+    modelo?: string;
+    precio?: string;
+    tipoMicro?: string;
+    capacidad?: string;
+    peso?: string;
+    medidasExter?: string;
+    medidasInter?: string;
+    tipoApertura?: string;
+    diamPlato?: string;
+    platoGira?: string;
+    color?: string;
+    numPotencias?: string;
+    potencia?: string;
+    frecuencia?: string;
+    tension?: string;
+    alimentacion?: string;
+    otros?: string;
+
+        constructor(lista: ListMicroOption){
+            this.id = lista.id;
+            this.categoria = lista.categoria;
+            this.subcategoria = lista.subcategoria;
+            this.marca = lista.marca;
+            this.modelo = lista.modelo;
+            this.precio = lista.precio;
+            this.tipoMicro = lista.tipoMicro;
+            this.capacidad = lista.capacidad;
+            this.peso = lista.peso;
+            this.medidasExter = lista.medidasExter;
+            this.medidasInter = lista.medidasInter;
+            this.tipoApertura = lista.tipoApertura;
+            this.diamPlato = lista.diamPlato;
+            this.platoGira = lista.platoGira;
+            this.color = lista.color;
+            this.numPotencias = lista.numPotencias;
+            this.potencia = lista.potencia;
+            this.frecuencia = lista.frecuencia;
+            this.tension = lista.tension;
+            this.alimentacion = lista.alimentacion;
+            this.otros = lista.otros;
+        }
+}
 
 /* ELECTRÓNICA */
 export class ListPCOption {

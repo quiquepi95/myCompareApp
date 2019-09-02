@@ -176,6 +176,30 @@
     </ion-list>
 </div>
 
+<!-- MICRO -->
+<ion-item *ngIf="hiddenElectrodomesticos" (click)="hiddenMicro = !hiddenMicro">
+    <ion-label><strong>Hornos</strong> <ion-badge color="light" item-end>{{listaService.listaMicro.length}}</ion-badge></ion-label>
+</ion-item>
+<div *ngIf="hiddenMicro && hiddenElectrodomesticos">
+    <ion-list>
+        <ion-item-sliding #slidingItem *ngFor="let lista of listaService.listaMicro">
+            <ion-item-options side="rigth">
+                <button (click)="editarLista(lista, slidingItem)" icon-only>
+                    <ion-icon name="create" color="danger"></ion-icon>
+                </button>
+                <button (click)="borrarLista(lista)" icon-only>
+                    <ion-icon name="trash" color="danger"></ion-icon>
+                </button>
+            </ion-item-options>
+
+            <ion-item>
+                {{ lista.marca }} {{lista.modelo}}
+            </ion-item>
+
+        </ion-item-sliding>
+    </ion-list>
+</div>
+
 <!-- ELECTRÓNICA -->
 <ion-item (click)="hiddenElectronica = !hiddenElectronica">
     <ion-label text-center><strong>Electrónica</strong></ion-label>

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption, ListSecadoraOption, ListHornoOption } from "../interfaces/lista";
+import { ListCocheOption, ListMotoOption, ListPCOption, ListLavadoraOption, ListFrigoOption, ListLavavajillasOption, ListSecadoraOption, ListHornoOption, ListMicroOption } from "../interfaces/lista";
 
 @Injectable()
 export class ListaService {
@@ -12,6 +12,7 @@ export class ListaService {
     listaLavavajillas: ListLavavajillasOption[] = [];
     listaSecadora: ListSecadoraOption[] = [];
     listaHorno: ListHornoOption[] = [];
+    listaMicro: ListMicroOption[] = [];
 
     constructor(){
         
@@ -51,6 +52,9 @@ export class ListaService {
             case 'HORNOS':
                 this.listaHorno.push(lista);
                 break;
+            case 'MICROHONDAS':
+                this.listaMicro.push(lista);
+                break;
             default:
                 console.log('No se ha podido agregar el objeto.');
                 break;
@@ -84,6 +88,9 @@ export class ListaService {
         this.listaHorno = this.listaHorno.filter( listaData => {
             return listaData.id !== lista.id;
         });
+        this.listaMicro = this.listaMicro.filter( listaData => {
+            return listaData.id !== lista.id;
+        });
 
         this.guardarStorage();
     }
@@ -97,6 +104,7 @@ export class ListaService {
         localStorage.setItem('dataLavavajillas', JSON.stringify( this.listaLavavajillas ));
         localStorage.setItem('dataSecadora', JSON.stringify( this.listaSecadora ));
         localStorage.setItem('dataHorno', JSON.stringify( this.listaHorno ));
+        localStorage.setItem('dataMicro', JSON.stringify( this.listaMicro ));
     }
 
     cargarStorage() {
@@ -147,6 +155,12 @@ export class ListaService {
             this.listaHorno = JSON.parse( localStorage.getItem('dataHorno') );
         } else{
             this.listaHorno = [];
+        }
+
+        if( localStorage.getItem('dataMicro') ){
+            this.listaMicro = JSON.parse( localStorage.getItem('dataMicro') );
+        } else{
+            this.listaMicro = [];
         }
 
 

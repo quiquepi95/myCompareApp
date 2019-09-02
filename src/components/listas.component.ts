@@ -19,6 +19,7 @@ export class ListasComponent {
     hiddenLavavajillas = false;
     hiddenSecadora = false;
     hiddenHorno = false;
+    hiddenMicro = false;
 
     constructor(public listaService: ListaService,
                 public navCtrl: NavController){}

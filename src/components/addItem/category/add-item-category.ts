@@ -84,7 +84,7 @@ export class AddPageCategory implements OnInit {
           this.navCtrl.pop();
         }
         break;
-        case 'MOTO':
+      case 'MOTO':
         if(this.subcategory.addMotos.marca){
           let listaMoto = {};
           if ( this.lista === null ){
@@ -136,7 +136,7 @@ export class AddPageCategory implements OnInit {
           this.navCtrl.pop();
         }
         break;
-        case 'PC':
+      case 'PC':
         if(this.subcategory.addPC.marca){
           let listaPC = {};
         if ( this.lista === null ){
@@ -188,7 +188,7 @@ export class AddPageCategory implements OnInit {
           this.navCtrl.pop();
         }
         break;
-        case 'LAVADORA':
+      case 'LAVADORA':
         if(this.subcategory.addLavadora.marca){
           let listaLavadora = {};
         if ( this.lista === null ){
@@ -296,7 +296,7 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
-        case 'LAVAVAJILLAS':
+      case 'LAVAVAJILLAS':
         if(this.subcategory.addLavavajillas.marca){
           let listaLavavajillas = {};
         if ( this.lista === null ){
@@ -358,7 +358,7 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
-        case 'SECADORAS':
+      case 'SECADORAS':
         if(this.subcategory.addSecadora.marca){
           let listaSecadora = {};
         if ( this.lista === null ){
@@ -416,7 +416,7 @@ export class AddPageCategory implements OnInit {
         this.navCtrl.pop();
         }
         break;
-        case 'HORNOS':
+      case 'HORNOS':
         if(this.subcategory.addHorno.marca){
           let listaHorno = {};
         if ( this.lista === null ){
@@ -465,6 +465,62 @@ export class AddPageCategory implements OnInit {
           };
         }
         this.listaService.agregarItem( listaHorno );
+        this.navCtrl.pop();
+        }
+        break;
+      case 'MICROHONDAS':
+        if(this.subcategory.addMicro.marca){
+          let listaMicro = {};
+        if ( this.lista === null ){
+          listaMicro = {
+            "id": new Date().getTime(),
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addMicro.marca,
+            "modelo": this.subcategory.addMicro.modelo,
+            "precio": this.subcategory.addMicro.precio,
+            "tipoMicro": this.subcategory.addMicro.tipoMicro,
+            "capacidad": this.subcategory.addMicro.capacidad,
+            "peso": this.subcategory.addMicro.peso,
+            "medidasExter": this.subcategory.addMicro.medidasExter,
+            "medidasInter": this.subcategory.addMicro.medidasInter,
+            "tipoApertura": this.subcategory.addMicro.tipoApertura,
+            "diamPlato": this.subcategory.addMicro.diamPlato,
+            "platoGira": this.subcategory.addMicro.platoGira,
+            "color": this.subcategory.addMicro.color,
+            "numPotencias": this.subcategory.addMicro.numPotencias,
+            "potencia": this.subcategory.addMicro.potencia,
+            "frecuencia": this.subcategory.addMicro.frecuencia,
+            "tension": this.subcategory.addMicro.tension,
+            "alimentacion": this.subcategory.addMicro.alimentacion,
+            "otros": this.subcategory.addMicro.otros,
+          };
+        } else {
+          listaMicro = {
+            "id": this.lista.id,
+            "categoria": this.category,
+            "subcategoria": this.subcategory.subCatSeleccionada,
+            "marca": this.subcategory.addMicro.marca,
+            "modelo": this.subcategory.addMicro.modelo,
+            "precio": this.subcategory.addMicro.precio,
+            "tipoMicro": this.subcategory.addMicro.tipoMicro,
+            "capacidad": this.subcategory.addMicro.capacidad,
+            "peso": this.subcategory.addMicro.peso,
+            "medidasExter": this.subcategory.addMicro.medidasExter,
+            "medidasInter": this.subcategory.addMicro.medidasInter,
+            "tipoApertura": this.subcategory.addMicro.tipoApertura,
+            "diamPlato": this.subcategory.addMicro.diamPlato,
+            "platoGira": this.subcategory.addMicro.platoGira,
+            "color": this.subcategory.addMicro.color,
+            "numPotencias": this.subcategory.addMicro.numPotencias,
+            "potencia": this.subcategory.addMicro.potencia,
+            "frecuencia": this.subcategory.addMicro.frecuencia,
+            "tension": this.subcategory.addMicro.tension,
+            "alimentacion": this.subcategory.addMicro.alimentacion,
+            "otros": this.subcategory.addMicro.otros,
+          };
+        }
+        this.listaService.agregarItem( listaMicro );
         this.navCtrl.pop();
         }
         break;

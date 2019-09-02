@@ -25,6 +25,7 @@ import { AddFrigoComponent } from '../components/addItem/addFrigorifico/addFrigo
 import { AddLavavajillasComponent } from '../components/addItem/addLavavajillas/addLavavajillas';
 import { AddSecadoraComponent } from '../components/addItem/addSecadora/addSecadora';
 import { AddHornoComponent } from '../components/addItem/addHorno/addHorno';
+import { AddMicroComponent } from '../components/addItem/addMicro/addMicro';
 
 // Comparar
 import { CompareItemComponent } from '../components/compareItem/compareItem';
@@ -36,6 +37,7 @@ import { CompareItemFrigoComponent } from '../components/compareItem/compareFrig
 import { CompareItemLavavajillasComponent } from '../components/compareItem/compareLavavajillas/compareLavavajillas';
 import { CompareItemSecadoraComponent } from '../components/compareItem/compareSecadora/compareSecadora';
 import { CompareItemHornoComponent } from '../components/compareItem/compareHorno/compareHorno';
+import { CompareItemMicroComponent } from '../components/compareItem/compareMicro/compareMicro';
 
 // Servicios
 import { ListaService } from '../services/lista.service';
@@ -60,6 +62,7 @@ import { ListasComponent } from '../components/listas.component';
     AddLavavajillasComponent,
     AddSecadoraComponent,
     AddHornoComponent,
+    AddMicroComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
@@ -68,7 +71,8 @@ import { ListasComponent } from '../components/listas.component';
     CompareItemFrigoComponent,
     CompareItemLavavajillasComponent,
     CompareItemSecadoraComponent,
-    CompareItemHornoComponent
+    CompareItemHornoComponent,
+    CompareItemMicroComponent
   ],
   imports: [
     BrowserModule,
@@ -92,6 +96,7 @@ import { ListasComponent } from '../components/listas.component';
     AddLavavajillasComponent,
     AddSecadoraComponent,
     AddHornoComponent,
+    AddMicroComponent,
     CompareItemComponent,
     CompareItemCochesComponent,
     CompareItemMotosComponent,
@@ -100,7 +105,8 @@ import { ListasComponent } from '../components/listas.component';
     CompareItemFrigoComponent,
     CompareItemLavavajillasComponent,
     CompareItemSecadoraComponent,
-    CompareItemHornoComponent
+    CompareItemHornoComponent,
+    CompareItemMicroComponent
   ],
   providers: [
     StatusBar,
